@@ -130,45 +130,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_buffer.html#adfb8d171c8035eeb5710b17334a46fdd">Clear</a>(<span class="keyword">const</span> glm::vec4 &amp; colour) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_buffer.html#a439aa0078692f06a8a879bc519fae35e">Render</a>(<a class="code" href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a> &amp; <span class="keywordtype">object</span>, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> ClearStencil();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; <a class="code" href="class_fluid_1_1_buffer.html#a34396186a2401afb7d31e7c973d0ea69">Swap</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="class_renderer_1_1_sprite.html">Renderer::Sprite</a> &amp; <a class="code" href="class_fluid_1_1_buffer.html#a7f434bc9eab0196f35bc76388702f21e">Sprite</a>();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_back.html">Back</a>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_front.html">Front</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> Add(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">unsigned</span> components, <span class="keywordtype">bool</span> depth);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// of size 1 or 2</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::vector&lt;Renderer::RenderTexture&gt; mTextures;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="class_renderer_1_1_sprite.html">Renderer::Sprite</a> mSprite;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_front.html">   95</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_front.html">Front</a></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="struct_fluid_1_1_front.html">Front</a>(<a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; b) : buffer(b) {}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> Bind(<span class="keywordtype">int</span> n) { buffer.mTextures.front().Bind(n); }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; buffer;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_back.html">  107</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_back.html">Back</a></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="struct_fluid_1_1_back.html">Back</a>(<a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; b) : buffer(b) {}</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> Bind(<span class="keywordtype">int</span> n) { buffer.mTextures.back().Bind(n); }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; buffer;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Buffer_h */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_buffer.html#ac9239dae1e9e4b488df466605ba7ce7f">ClearStencil</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; <a class="code" href="class_fluid_1_1_buffer.html#a34396186a2401afb7d31e7c973d0ea69">Swap</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_renderer_1_1_sprite.html">Renderer::Sprite</a> &amp; <a class="code" href="class_fluid_1_1_buffer.html#a7f434bc9eab0196f35bc76388702f21e">Sprite</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_back.html">Back</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">friend</span> <span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_front.html">Front</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> Add(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">unsigned</span> components, <span class="keywordtype">bool</span> depth);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// of size 1 or 2</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::vector&lt;Renderer::RenderTexture&gt; mTextures;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_renderer_1_1_sprite.html">Renderer::Sprite</a> mSprite;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_front.html">   99</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_front.html">Front</a></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="struct_fluid_1_1_front.html">Front</a>(<a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; b) : buffer(b) {}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> Bind(<span class="keywordtype">int</span> n) { buffer.mTextures.front().Bind(n); }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; buffer;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_back.html">  111</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_back.html">Back</a></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;{</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="struct_fluid_1_1_back.html">Back</a>(<a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; b) : buffer(b) {}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> Bind(<span class="keywordtype">int</span> n) { buffer.mTextures.back().Bind(n); }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> &amp; buffer;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Buffer_h */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_a724395cf4b6f53bccf9829d4eefab5b7"><div class="ttname"><a href="class_fluid_1_1_buffer.html#a724395cf4b6f53bccf9829d4eefab5b7">Fluid::Buffer::Buffer</a></div><div class="ttdeci">Buffer(const glm::vec2 &amp;size, unsigned components, bool doubled=false, bool depth=false)</div><div class="ttdoc">Constructor that creates the underlying RenderTexture(s) </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:16</div></div>
-<div class="ttc" id="struct_fluid_1_1_front_html"><div class="ttname"><a href="struct_fluid_1_1_front.html">Fluid::Front</a></div><div class="ttdoc">Helper class to Bind the Texture of the front RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:95</div></div>
+<div class="ttc" id="struct_fluid_1_1_front_html"><div class="ttname"><a href="struct_fluid_1_1_front.html">Fluid::Front</a></div><div class="ttdoc">Helper class to Bind the Texture of the front RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:99</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html"><div class="ttname"><a href="class_fluid_1_1_buffer.html">Fluid::Buffer</a></div><div class="ttdoc">Represents the grid used to hold the velocity field, boundaries, density, etc. This holds one or two ...</div><div class="ttdef"><b>Definition:</b> Buffer.h:29</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_a439aa0078692f06a8a879bc519fae35e"><div class="ttname"><a href="class_fluid_1_1_buffer.html#a439aa0078692f06a8a879bc519fae35e">Fluid::Buffer::Render</a></div><div class="ttdeci">void Render(Renderer::Drawable &amp;object, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Renders an object on the front RenderTexture only. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:57</div></div>
 <div class="ttc" id="struct_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:22</div></div>
@@ -176,14 +177,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_renderer_1_1_reader_html"><div class="ttname"><a href="class_renderer_1_1_reader.html">Renderer::Reader</a></div><div class="ttdoc">Helper class to read & print (to stdout) the content of a RenderTexture. </div><div class="ttdef"><b>Definition:</b> Reader.h:21</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_a578bf43e8ffbe647e9dc7172b57d8b61"><div class="ttname"><a href="class_fluid_1_1_buffer.html#a578bf43e8ffbe647e9dc7172b57d8b61">Fluid::Buffer::Get</a></div><div class="ttdeci">Renderer::Reader Get()</div><div class="ttdoc">Returns a Reader to poke the content of the Texture of the front RenderTexture. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:32</div></div>
 <div class="ttc" id="struct_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:22</div></div>
-<div class="ttc" id="struct_fluid_1_1_back_html"><div class="ttname"><a href="struct_fluid_1_1_back.html">Fluid::Back</a></div><div class="ttdoc">Helper class to Bind the Texture of the back RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:107</div></div>
+<div class="ttc" id="struct_fluid_1_1_back_html"><div class="ttname"><a href="struct_fluid_1_1_back.html">Fluid::Back</a></div><div class="ttdoc">Helper class to Bind the Texture of the back RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:111</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_adfb8d171c8035eeb5710b17334a46fdd"><div class="ttname"><a href="class_fluid_1_1_buffer.html#adfb8d171c8035eeb5710b17334a46fdd">Fluid::Buffer::Clear</a></div><div class="ttdeci">void Clear(const glm::vec4 &amp;colour) override</div><div class="ttdoc">Clears the Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:52</div></div>
 <div class="ttc" id="struct_fluid_1_1_operator_context_html"><div class="ttname"><a href="struct_fluid_1_1_operator_context.html">Fluid::OperatorContext</a></div><div class="ttdoc">Helper class returned from the call operator of Operator. </div><div class="ttdef"><b>Definition:</b> Operator.h:23</div></div>
+<div class="ttc" id="class_fluid_1_1_buffer_html_ac9239dae1e9e4b488df466605ba7ce7f"><div class="ttname"><a href="class_fluid_1_1_buffer.html#ac9239dae1e9e4b488df466605ba7ce7f">Fluid::Buffer::ClearStencil</a></div><div class="ttdeci">void ClearStencil()</div><div class="ttdoc">Clears the stencil on both RenderTexture. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:37</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_a34396186a2401afb7d31e7c973d0ea69"><div class="ttname"><a href="class_fluid_1_1_buffer.html#a34396186a2401afb7d31e7c973d0ea69">Fluid::Buffer::Swap</a></div><div class="ttdeci">Buffer &amp; Swap()</div><div class="ttdoc">Swap the front and back RenderTexture. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:62</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_a2145e2c0956ab02086db97b2751cc995"><div class="ttname"><a href="class_fluid_1_1_buffer.html#a2145e2c0956ab02086db97b2751cc995">Fluid::Buffer::Linear</a></div><div class="ttdeci">void Linear()</div><div class="ttdoc">Make the texture linear. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:42</div></div>
 <div class="ttc" id="namespace_fluid_html"><div class="ttname"><a href="namespace_fluid.html">Fluid</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html_aecc47b98c883ccc404e640b822e4080a"><div class="ttname"><a href="class_fluid_1_1_buffer.html#aecc47b98c883ccc404e640b822e4080a">Fluid::Buffer::ClampToEdge</a></div><div class="ttdeci">void ClampToEdge()</div><div class="ttdoc">When sampling from outside the texture, a value of 0 is returned. </div><div class="ttdef"><b>Definition:</b> Buffer.cpp:47</div></div>
-<div class="ttc" id="class_renderer_1_1_sprite_html"><div class="ttname"><a href="class_renderer_1_1_sprite.html">Renderer::Sprite</a></div><div class="ttdoc">Enables to draw a texture with a given program. </div><div class="ttdef"><b>Definition:</b> Sprite.h:22</div></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html"><div class="ttname"><a href="class_renderer_1_1_sprite.html">Renderer::Sprite</a></div><div class="ttdoc">Drawable to draw a texture with a given program. </div><div class="ttdef"><b>Definition:</b> Sprite.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

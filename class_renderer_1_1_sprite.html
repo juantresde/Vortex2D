@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Enables to draw a texture with a given program.  
+<p><a class="el" href="struct_renderer_1_1_drawable.html" title="An interface to represent an object that can be rendered on a RenderTarget. ">Drawable</a> to draw a texture with a given program.  
  <a href="class_renderer_1_1_sprite.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_sprite_8h_source.html">Sprite.h</a>&gt;</code></p>
@@ -124,67 +124,25 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Sprite</b> (<a class="el" href="class_renderer_1_1_sprite.html">Sprite</a> &amp;&amp;)</td></tr>
 <tr class="separator:a6aeda937a33966115d7b21a91c80b910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addefbc4c856d8cc3bd2e1c0ceaa8d7ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addefbc4c856d8cc3bd2e1c0ceaa8d7ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTexture</b> (<a class="el" href="class_renderer_1_1_texture.html">Texture</a> &amp;texture)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer_1_1_sprite.html#addefbc4c856d8cc3bd2e1c0ceaa8d7ae">SetTexture</a> (<a class="el" href="class_renderer_1_1_texture.html">Texture</a> &amp;texture)</td></tr>
+<tr class="memdesc:addefbc4c856d8cc3bd2e1c0ceaa8d7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the texture to be bound when rendering. <br /></td></tr>
 <tr class="separator:addefbc4c856d8cc3bd2e1c0ceaa8d7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93a2caa341ce370ce00032a7b88624e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93a2caa341ce370ce00032a7b88624e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NoTexture</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer_1_1_sprite.html#a93a2caa341ce370ce00032a7b88624e5">NoTexture</a> ()</td></tr>
+<tr class="memdesc:a93a2caa341ce370ce00032a7b88624e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Don't bind any texture when rendering, useful when we bind the texture seperately. <br /></td></tr>
 <tr class="separator:a93a2caa341ce370ce00032a7b88624e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a446f868d54e717022175387668a01897"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a446f868d54e717022175387668a01897"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProgram</b> (<a class="el" href="class_renderer_1_1_program.html">Program</a> &amp;program)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer_1_1_sprite.html#a446f868d54e717022175387668a01897">SetProgram</a> (<a class="el" href="class_renderer_1_1_program.html">Program</a> &amp;program)</td></tr>
+<tr class="memdesc:a446f868d54e717022175387668a01897"><td class="mdescLeft">&#160;</td><td class="mdescRight">The program to use when rendering. <br /></td></tr>
 <tr class="separator:a446f868d54e717022175387668a01897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba5f2dfe6b0b8e3e565c1b02c69f6c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Render</a> (<a class="el" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</td></tr>
-<tr class="memdesc:aba5f2dfe6b0b8e3e565c1b02c69f6c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders on a <a class="el" href="struct_renderer_1_1_render_target.html" title="And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...">RenderTarget</a>.  <a href="#aba5f2dfe6b0b8e3e565c1b02c69f6c73">More...</a><br /></td></tr>
+<tr class="memitem:aba5f2dfe6b0b8e3e565c1b02c69f6c73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba5f2dfe6b0b8e3e565c1b02c69f6c73"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Render</a> (<a class="el" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</td></tr>
+<tr class="memdesc:aba5f2dfe6b0b8e3e565c1b02c69f6c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the <a class="el" href="class_renderer_1_1_sprite.html" title="Drawable to draw a texture with a given program. ">Sprite</a> to a <a class="el" href="struct_renderer_1_1_render_target.html" title="And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...">RenderTarget</a>. <br /></td></tr>
 <tr class="separator:aba5f2dfe6b0b8e3e565c1b02c69f6c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Enables to draw a texture with a given program. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aba5f2dfe6b0b8e3e565c1b02c69f6c73"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Renderer::Sprite::Render </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp;&#160;</td>
-          <td class="paramname"><em>target</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
-          <td class="paramname"><em>transform</em> = <code>glm::mat4()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Renders on a <a class="el" href="struct_renderer_1_1_render_target.html" title="And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...">RenderTarget</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target</td><td>the target (<a class="el" href="class_renderer_1_1_render_texture.html" title="Use to draw objects off-screen on a texture. ">RenderTexture</a> or RenderWindow) </td></tr>
-    <tr><td class="paramname">transform</td><td>an optional transform to apply to the object </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="struct_renderer_1_1_drawable.html#a67041025789e3a5f42416e90ee7ad1d5">Renderer::Drawable</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p><a class="el" href="struct_renderer_1_1_drawable.html" title="An interface to represent an object that can be rendered on a RenderTarget. ">Drawable</a> to draw a texture with a given program. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/mmaldacker/Vortex2D/Vortex2D/Renderer/<a class="el" href="_sprite_8h_source.html">Sprite.h</a></li>
 <li>/Users/mmaldacker/Vortex2D/Vortex2D/Renderer/Sprite.cpp</li>
 </ul>

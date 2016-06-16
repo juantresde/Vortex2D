@@ -115,27 +115,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_linear_solver_1_1_data.html">   29</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a>(<span class="keyword">const</span> glm::vec2 &amp; size)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        : Weights(size, 4)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        , Diagonal(size, 1)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        , Pressure(size, 2, <span class="keyword">true</span>, <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        : <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#aaa347c8f55df84a7c95cb62b18b5e3a2">Weights</a>(size, 4)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        , <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae20991692358af0f3180938f65ba828f">Diagonal</a>(size, 1)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        , <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae89fdc155877657f368c9997eb643fa2">Pressure</a>(size, 2, <span class="keyword">true</span>, <span class="keyword">true</span>)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> Weights;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> Diagonal;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> Pressure;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_linear_solver_1_1_data.html#aaa347c8f55df84a7c95cb62b18b5e3a2">   40</a></span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#aaa347c8f55df84a7c95cb62b18b5e3a2">Weights</a>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Init(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a> &amp; data) = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Solve(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a> &amp; data) = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae20991692358af0f3180938f65ba828f">   45</a></span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae20991692358af0f3180938f65ba828f">Diagonal</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae89fdc155877657f368c9997eb643fa2">   50</a></span>&#160;        <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> <a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html#ae89fdc155877657f368c9997eb643fa2">Pressure</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_fluid_1_1_linear_solver.html#acb3ef3ee5341f07f70d2b1276874f3aa">Init</a>(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a> &amp; data) = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="struct_fluid_1_1_linear_solver.html#a03ac16407f7985e80c91518bb66c8413">Solve</a>(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">Data</a> &amp; data) = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="class_fluid_1_1_buffer_html"><div class="ttname"><a href="class_fluid_1_1_buffer.html">Fluid::Buffer</a></div><div class="ttdoc">Represents the grid used to hold the velocity field, boundaries, density, etc. This holds one or two ...</div><div class="ttdef"><b>Definition:</b> Buffer.h:29</div></div>
 <div class="ttc" id="struct_fluid_1_1_linear_solver_1_1_data_html"><div class="ttname"><a href="struct_fluid_1_1_linear_solver_1_1_data.html">Fluid::LinearSolver::Data</a></div><div class="ttdoc">The data of the linear solver. In Ax = b, x is first component of Pressure, A is Weights + Diagonals...</div><div class="ttdef"><b>Definition:</b> LinearSolver.h:29</div></div>
+<div class="ttc" id="struct_fluid_1_1_linear_solver_1_1_data_html_ae89fdc155877657f368c9997eb643fa2"><div class="ttname"><a href="struct_fluid_1_1_linear_solver_1_1_data.html#ae89fdc155877657f368c9997eb643fa2">Fluid::LinearSolver::Data::Pressure</a></div><div class="ttdeci">Buffer Pressure</div><div class="ttdoc">Buffer with 2 components, first one is unknowns and second is the right hand side of the linear equat...</div><div class="ttdef"><b>Definition:</b> LinearSolver.h:50</div></div>
+<div class="ttc" id="struct_fluid_1_1_linear_solver_1_1_data_html_aaa347c8f55df84a7c95cb62b18b5e3a2"><div class="ttname"><a href="struct_fluid_1_1_linear_solver_1_1_data.html#aaa347c8f55df84a7c95cb62b18b5e3a2">Fluid::LinearSolver::Data::Weights</a></div><div class="ttdeci">Buffer Weights</div><div class="ttdoc">Buffer with 4 components holding the weights of the 4 neighbouring grid cells. </div><div class="ttdef"><b>Definition:</b> LinearSolver.h:40</div></div>
+<div class="ttc" id="struct_fluid_1_1_linear_solver_html_acb3ef3ee5341f07f70d2b1276874f3aa"><div class="ttname"><a href="struct_fluid_1_1_linear_solver.html#acb3ef3ee5341f07f70d2b1276874f3aa">Fluid::LinearSolver::Init</a></div><div class="ttdeci">virtual void Init(Data &amp;data)=0</div><div class="ttdoc">Any initialisation steps to be done before solving the linear equations. </div></div>
+<div class="ttc" id="struct_fluid_1_1_linear_solver_1_1_data_html_ae20991692358af0f3180938f65ba828f"><div class="ttname"><a href="struct_fluid_1_1_linear_solver_1_1_data.html#ae20991692358af0f3180938f65ba828f">Fluid::LinearSolver::Data::Diagonal</a></div><div class="ttdeci">Buffer Diagonal</div><div class="ttdoc">Buffer with 1 component holding the diagonal value of the matrix. </div><div class="ttdef"><b>Definition:</b> LinearSolver.h:45</div></div>
 <div class="ttc" id="struct_fluid_1_1_linear_solver_html"><div class="ttname"><a href="struct_fluid_1_1_linear_solver.html">Fluid::LinearSolver</a></div><div class="ttdoc">An interface to represent a linear solver. </div><div class="ttdef"><b>Definition:</b> LinearSolver.h:20</div></div>
 <div class="ttc" id="namespace_fluid_html"><div class="ttname"><a href="namespace_fluid.html">Fluid</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="struct_fluid_1_1_linear_solver_html_a03ac16407f7985e80c91518bb66c8413"><div class="ttname"><a href="struct_fluid_1_1_linear_solver.html#a03ac16407f7985e80c91518bb66c8413">Fluid::LinearSolver::Solve</a></div><div class="ttdeci">virtual void Solve(Data &amp;data)=0</div><div class="ttdoc">Solves the linear equations. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

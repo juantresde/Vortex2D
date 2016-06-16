@@ -119,30 +119,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_renderer_1_1_sprite.html">Sprite</a>(<a class="code" href="class_renderer_1_1_sprite.html">Sprite</a> &amp;&amp;);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ~<a class="code" href="class_renderer_1_1_sprite.html">Sprite</a>();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> SetTexture(<a class="code" href="class_renderer_1_1_texture.html">Texture</a> &amp; texture);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> NoTexture();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> SetProgram(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; program);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Render</a>(<a class="code" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    GLuint mVertexArray;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    GLuint mVertexBuffer;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_sprite.html#addefbc4c856d8cc3bd2e1c0ceaa8d7ae">SetTexture</a>(<a class="code" href="class_renderer_1_1_texture.html">Texture</a> &amp; texture);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_sprite.html#a93a2caa341ce370ce00032a7b88624e5">NoTexture</a>();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_renderer_1_1_texture.html">Texture</a> * mTexture;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> * mProgram;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Sprite_hpp */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_renderer_1_1_sprite_html_aba5f2dfe6b0b8e3e565c1b02c69f6c73"><div class="ttname"><a href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Renderer::Sprite::Render</a></div><div class="ttdeci">void Render(RenderTarget &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Renders on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Sprite.cpp:78</div></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_sprite.html#a446f868d54e717022175387668a01897">SetProgram</a>(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; program);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Render</a>(<a class="code" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    GLuint mVertexArray;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    GLuint mVertexBuffer;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="class_renderer_1_1_texture.html">Texture</a> * mTexture;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> * mProgram;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Sprite_hpp */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html_aba5f2dfe6b0b8e3e565c1b02c69f6c73"><div class="ttname"><a href="class_renderer_1_1_sprite.html#aba5f2dfe6b0b8e3e565c1b02c69f6c73">Renderer::Sprite::Render</a></div><div class="ttdeci">void Render(RenderTarget &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Renders the Sprite to a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Sprite.cpp:78</div></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html_a93a2caa341ce370ce00032a7b88624e5"><div class="ttname"><a href="class_renderer_1_1_sprite.html#a93a2caa341ce370ce00032a7b88624e5">Renderer::Sprite::NoTexture</a></div><div class="ttdeci">void NoTexture()</div><div class="ttdoc">Don&#39;t bind any texture when rendering, useful when we bind the texture seperately. </div><div class="ttdef"><b>Definition:</b> Sprite.cpp:68</div></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html_addefbc4c856d8cc3bd2e1c0ceaa8d7ae"><div class="ttname"><a href="class_renderer_1_1_sprite.html#addefbc4c856d8cc3bd2e1c0ceaa8d7ae">Renderer::Sprite::SetTexture</a></div><div class="ttdeci">void SetTexture(Texture &amp;texture)</div><div class="ttdoc">Set the texture to be bound when rendering. </div><div class="ttdef"><b>Definition:</b> Sprite.cpp:63</div></div>
 <div class="ttc" id="struct_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:22</div></div>
 <div class="ttc" id="struct_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:22</div></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html_a446f868d54e717022175387668a01897"><div class="ttname"><a href="class_renderer_1_1_sprite.html#a446f868d54e717022175387668a01897">Renderer::Sprite::SetProgram</a></div><div class="ttdeci">void SetProgram(Program &amp;program)</div><div class="ttdoc">The program to use when rendering. </div><div class="ttdef"><b>Definition:</b> Sprite.cpp:73</div></div>
 <div class="ttc" id="class_renderer_1_1_texture_html"><div class="ttname"><a href="class_renderer_1_1_texture.html">Renderer::Texture</a></div><div class="ttdoc">Create and manage a texture. </div><div class="ttdef"><b>Definition:</b> Texture.h:20</div></div>
 <div class="ttc" id="namespace_renderer_html"><div class="ttname"><a href="namespace_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Disable.h:14</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html"><div class="ttname"><a href="class_renderer_1_1_program.html">Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:95</div></div>
-<div class="ttc" id="class_renderer_1_1_sprite_html"><div class="ttname"><a href="class_renderer_1_1_sprite.html">Renderer::Sprite</a></div><div class="ttdoc">Enables to draw a texture with a given program. </div><div class="ttdef"><b>Definition:</b> Sprite.h:22</div></div>
+<div class="ttc" id="class_renderer_1_1_program_html"><div class="ttname"><a href="class_renderer_1_1_program.html">Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:118</div></div>
+<div class="ttc" id="class_renderer_1_1_sprite_html"><div class="ttname"><a href="class_renderer_1_1_sprite.html">Renderer::Sprite</a></div><div class="ttdoc">Drawable to draw a texture with a given program. </div><div class="ttdef"><b>Definition:</b> Sprite.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

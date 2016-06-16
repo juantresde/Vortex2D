@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['operator',['Operator',['../class_fluid_1_1_operator.html',1,'Fluid']]],
-  ['operator',['Operator',['../class_fluid_1_1_operator.html#a86bcfc4f4f3983dfa83cf61fafba376c',1,'Fluid::Operator']]],
-  ['operator_28_29',['operator()',['../class_fluid_1_1_operator.html#ab6a760d8e66386dac5a85f8e2bbf2aed',1,'Fluid::Operator']]],
-  ['operatorcontext',['OperatorContext',['../struct_fluid_1_1_operator_context.html',1,'Fluid']]]
+  ['linear',['Linear',['../class_fluid_1_1_buffer.html#a2145e2c0956ab02086db97b2751cc995',1,'Fluid::Buffer']]],
+  ['linearsolver',['LinearSolver',['../struct_fluid_1_1_linear_solver.html',1,'Fluid']]],
+  ['link',['Link',['../class_renderer_1_1_program.html#a5da3df741eace92f0a09c157e060377b',1,'Renderer::Program']]]
 ];
