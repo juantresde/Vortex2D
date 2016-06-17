@@ -98,81 +98,77 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Operator.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Vertex2D</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Maximilian Maldacker on 16/09/2015.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Maximilian Maldacker. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef Vertex2D_Operator_h</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define Vertex2D_Operator_h</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef Vertex2D_Operator_h</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define Vertex2D_Operator_h</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Buffer.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Shader.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_fluid.html">Fluid</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_fluid_1_1_operator_context.html">   23</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_fluid_1_1_operator_context.html">OperatorContext</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="struct_fluid_1_1_operator_context.html">OperatorContext</a>(<a class="code" href="class_renderer_1_1_program.html">Renderer::Program</a> &amp; p) : Program(p) {}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Renderer::Program</a> &amp; Program;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define REQUIRES(...) typename std::enable_if&lt;(__VA_ARGS__), int&gt;::type = 0</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_fluid_1_1_operator.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fluid_1_1_operator.html">Operator</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_fluid_1_1_operator.html#a86bcfc4f4f3983dfa83cf61fafba376c">   43</a></span>&#160;    <a class="code" href="class_fluid_1_1_operator.html#a86bcfc4f4f3983dfa83cf61fafba376c">Operator</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * vertex, <span class="keyword">const</span> <span class="keywordtype">char</span> * fragment) : mProgram(vertex, fragment)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_fluid_1_1_operator.html#af326743b84e92b4b28e8be3d72bce33c">   50</a></span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Renderer::Program</a> &amp; <a class="code" href="class_fluid_1_1_operator.html#af326743b84e92b4b28e8be3d72bce33c">Use</a>()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> mProgram.<a class="code" href="class_renderer_1_1_program.html#a2935a144945c8c534595d5e9c593d4df">Use</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_fluid_1_1_operator.html#ab6a760d8e66386dac5a85f8e2bbf2aed">   68</a></span>&#160;    <a class="code" href="struct_fluid_1_1_operator_context.html">OperatorContext</a> <a class="code" href="class_fluid_1_1_operator.html#ab6a760d8e66386dac5a85f8e2bbf2aed">operator()</a>(Args &amp;&amp; ... args)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        BindHelper(0, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> {mProgram};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args, REQUIRES(std::is_same&lt;T, Buffer&amp;&gt;())&gt;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit, T &amp;&amp; input, Args &amp;&amp; ... args)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="struct_fluid_1_1_front.html">Front</a>(input).Bind(unit);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        BindHelper(unit+1, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args, REQUIRES(std::is_same&lt;T, Back&gt;())&gt;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit, T &amp;&amp; input, Args &amp;&amp; ... args)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        input.Bind(unit);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        BindHelper(unit+1, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Buffer.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Shader.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Fluid {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_fluid_1_1_operator_context.html">   19</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_fluid_1_1_operator_context.html">OperatorContext</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_fluid_1_1_operator_context.html">OperatorContext</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Renderer::Program</a> &amp; p) : Program(p) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Renderer::Program</a> &amp; Program;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define REQUIRES(...) typename std::enable_if&lt;(__VA_ARGS__), int&gt;::type = 0</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_operator.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html">Operator</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a3336a8dc625735cff3facd09f74b5019">   39</a></span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a3336a8dc625735cff3facd09f74b5019">Operator</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * vertex, <span class="keyword">const</span> <span class="keywordtype">char</span> * fragment) : mProgram(vertex, fragment)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a33d28897cd0d7a3961f28bb6ccc0632b">   46</a></span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Renderer::Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a33d28897cd0d7a3961f28bb6ccc0632b">Use</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> mProgram.<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a8daa38b70da7889e556d5c954b90eae6">Use</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a4f6d283bac02be3fa7f25cfdc7f14800">   64</a></span>&#160;    <a class="code" href="struct_vortex2_d_1_1_fluid_1_1_operator_context.html">OperatorContext</a> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html#a4f6d283bac02be3fa7f25cfdc7f14800">operator()</a>(Args &amp;&amp; ... args)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        BindHelper(0, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> {mProgram};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args, REQUIRES(std::is_same&lt;T, Buffer&amp;&gt;())&gt;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit, T &amp;&amp; input, Args &amp;&amp; ... args)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="struct_vortex2_d_1_1_fluid_1_1_front.html">Front</a>(input).Bind(unit);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        BindHelper(unit+1, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ... Args, REQUIRES(std::is_same&lt;T, Back&gt;())&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit, T &amp;&amp; input, Args &amp;&amp; ... args)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        input.Bind(unit);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        BindHelper(unit+1, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> BindHelper(<span class="keywordtype">int</span> unit)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Renderer::Program</a> mProgram;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_fluid_1_1_operator_html_a86bcfc4f4f3983dfa83cf61fafba376c"><div class="ttname"><a href="class_fluid_1_1_operator.html#a86bcfc4f4f3983dfa83cf61fafba376c">Fluid::Operator::Operator</a></div><div class="ttdeci">Operator(const char *vertex, const char *fragment)</div><div class="ttdoc">Constructor with the Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Operator.h:43</div></div>
-<div class="ttc" id="struct_fluid_1_1_front_html"><div class="ttname"><a href="struct_fluid_1_1_front.html">Fluid::Front</a></div><div class="ttdoc">Helper class to Bind the Texture of the front RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:99</div></div>
-<div class="ttc" id="class_fluid_1_1_operator_html"><div class="ttname"><a href="class_fluid_1_1_operator.html">Fluid::Operator</a></div><div class="ttdoc">This is a helper class to write succint code when running a shader with multiple Texture inputs on a ...</div><div class="ttdef"><b>Definition:</b> Operator.h:35</div></div>
-<div class="ttc" id="struct_fluid_1_1_operator_context_html"><div class="ttname"><a href="struct_fluid_1_1_operator_context.html">Fluid::OperatorContext</a></div><div class="ttdoc">Helper class returned from the call operator of Operator. </div><div class="ttdef"><b>Definition:</b> Operator.h:23</div></div>
-<div class="ttc" id="class_fluid_1_1_operator_html_ab6a760d8e66386dac5a85f8e2bbf2aed"><div class="ttname"><a href="class_fluid_1_1_operator.html#ab6a760d8e66386dac5a85f8e2bbf2aed">Fluid::Operator::operator()</a></div><div class="ttdeci">OperatorContext operator()(Args &amp;&amp;...args)</div><div class="ttdoc">An overloaded function call operator which takes as argument a list of Buffer objects. The Buffer objects will have their Texture bind in order and a helper class is returned to the Buffer. This Buffer object will then in turn run the Program of this Operator object on its front RenderTexture. </div><div class="ttdef"><b>Definition:</b> Operator.h:68</div></div>
-<div class="ttc" id="class_fluid_1_1_operator_html_af326743b84e92b4b28e8be3d72bce33c"><div class="ttname"><a href="class_fluid_1_1_operator.html#af326743b84e92b4b28e8be3d72bce33c">Fluid::Operator::Use</a></div><div class="ttdeci">Renderer::Program &amp; Use()</div><div class="ttdoc">Use the Program behind the Operator, allows us to set uniforms. </div><div class="ttdef"><b>Definition:</b> Operator.h:50</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a2935a144945c8c534595d5e9c593d4df"><div class="ttname"><a href="class_renderer_1_1_program.html#a2935a144945c8c534595d5e9c593d4df">Renderer::Program::Use</a></div><div class="ttdeci">Program &amp; Use()</div><div class="ttdoc">Use this Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:193</div></div>
-<div class="ttc" id="namespace_fluid_html"><div class="ttname"><a href="namespace_fluid.html">Fluid</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html"><div class="ttname"><a href="class_renderer_1_1_program.html">Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:118</div></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Renderer::Program mProgram;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_vortex2_d_1_1_fluid_1_1_operator_context_html"><div class="ttname"><a href="struct_vortex2_d_1_1_fluid_1_1_operator_context.html">Vortex2D::Fluid::OperatorContext</a></div><div class="ttdoc">Helper class returned from the call operator of Operator. </div><div class="ttdef"><b>Definition:</b> Operator.h:19</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a8daa38b70da7889e556d5c954b90eae6"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a8daa38b70da7889e556d5c954b90eae6">Vortex2D::Renderer::Program::Use</a></div><div class="ttdeci">Program &amp; Use()</div><div class="ttdoc">Use this Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:192</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html">Vortex2D::Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:117</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_fluid_1_1_front_html"><div class="ttname"><a href="struct_vortex2_d_1_1_fluid_1_1_front.html">Vortex2D::Fluid::Front</a></div><div class="ttdoc">Helper class to Bind the Texture of the front RenderTexture of Buffer. </div><div class="ttdef"><b>Definition:</b> Buffer.h:95</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_operator_html_a4f6d283bac02be3fa7f25cfdc7f14800"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_operator.html#a4f6d283bac02be3fa7f25cfdc7f14800">Vortex2D::Fluid::Operator::operator()</a></div><div class="ttdeci">OperatorContext operator()(Args &amp;&amp;...args)</div><div class="ttdoc">An overloaded function call operator which takes as argument a list of Buffer objects. The Buffer objects will have their Texture bind in order and a helper class is returned to the Buffer. This Buffer object will then in turn run the Program of this Operator object on its front RenderTexture. </div><div class="ttdef"><b>Definition:</b> Operator.h:64</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_operator_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_operator.html">Vortex2D::Fluid::Operator</a></div><div class="ttdoc">This is a helper class to write succint code when running a shader with multiple Texture inputs on a ...</div><div class="ttdef"><b>Definition:</b> Operator.h:31</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_operator_html_a3336a8dc625735cff3facd09f74b5019"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_operator.html#a3336a8dc625735cff3facd09f74b5019">Vortex2D::Fluid::Operator::Operator</a></div><div class="ttdeci">Operator(const char *vertex, const char *fragment)</div><div class="ttdoc">Constructor with the Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Operator.h:39</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_operator_html_a33d28897cd0d7a3961f28bb6ccc0632b"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_operator.html#a33d28897cd0d7a3961f28bb6ccc0632b">Vortex2D::Fluid::Operator::Use</a></div><div class="ttdeci">Renderer::Program &amp; Use()</div><div class="ttdoc">Use the Program behind the Operator, allows us to set uniforms. </div><div class="ttdef"><b>Definition:</b> Operator.h:46</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

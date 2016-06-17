@@ -98,52 +98,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  Density.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Vertex2D</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Maximilian Maldacker on 05/04/2016.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2016 Maximilian Maldacker. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __Vertex2D__Density__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __Vertex2D__Density__</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __Vertex2D__Density__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __Vertex2D__Density__</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Size.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Operator.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Drawable.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Transformable.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_fluid.html">Fluid</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>Engine;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_fluid_1_1_density.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fluid_1_1_density.html">Density</a> : <span class="keyword">public</span> <a class="code" href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a>, <span class="keyword">public</span> <a class="code" href="struct_renderer_1_1_transformable.html">Renderer::Transformable</a></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_fluid_1_1_density.html">Density</a>(<a class="code" href="struct_fluid_1_1_dimensions.html">Dimensions</a> dimensions, <span class="keywordtype">float</span> dt);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_density.html#a0026d20964cb2f1d61ae74e52227b5c7">Render</a>(<a class="code" href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a> &amp; <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_density.html#a6bfb1b2a83856388b273849e1ed4c983">Advect</a>(<a class="code" href="class_fluid_1_1_engine.html">Engine</a> &amp; engine);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_density.html#a0026d20964cb2f1d61ae74e52227b5c7">Render</a>(<a class="code" href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="struct_fluid_1_1_dimensions.html">Dimensions</a> mDimensions;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_fluid_1_1_buffer.html">Buffer</a> mDensity;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vertex2D__Density__) */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_fluid_1_1_buffer_html"><div class="ttname"><a href="class_fluid_1_1_buffer.html">Fluid::Buffer</a></div><div class="ttdoc">Represents the grid used to hold the velocity field, boundaries, density, etc. This holds one or two ...</div><div class="ttdef"><b>Definition:</b> Buffer.h:29</div></div>
-<div class="ttc" id="struct_renderer_1_1_transformable_html"><div class="ttname"><a href="struct_renderer_1_1_transformable.html">Renderer::Transformable</a></div><div class="ttdoc">Class to represent the transformation of an object: position, scale, rotation and anchor...</div><div class="ttdef"><b>Definition:</b> Transformable.h:46</div></div>
-<div class="ttc" id="struct_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:22</div></div>
-<div class="ttc" id="struct_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:22</div></div>
-<div class="ttc" id="class_fluid_1_1_engine_html"><div class="ttname"><a href="class_fluid_1_1_engine.html">Fluid::Engine</a></div><div class="ttdoc">The main class of the framework. Each instance manages a grid and this class is used to set forces...</div><div class="ttdef"><b>Definition:</b> Engine.h:29</div></div>
-<div class="ttc" id="class_fluid_1_1_density_html_a0026d20964cb2f1d61ae74e52227b5c7"><div class="ttname"><a href="class_fluid_1_1_density.html#a0026d20964cb2f1d61ae74e52227b5c7">Fluid::Density::Render</a></div><div class="ttdeci">void Render(Renderer::Drawable &amp;object)</div><div class="ttdoc">Renders some colours on the density grid. </div><div class="ttdef"><b>Definition:</b> Density.cpp:23</div></div>
-<div class="ttc" id="struct_fluid_1_1_dimensions_html"><div class="ttname"><a href="struct_fluid_1_1_dimensions.html">Fluid::Dimensions</a></div><div class="ttdoc">Represents the size of the fluid grid. This is useful if we want a different resolution or scale than...</div><div class="ttdef"><b>Definition:</b> Size.h:21</div></div>
-<div class="ttc" id="class_fluid_1_1_density_html"><div class="ttname"><a href="class_fluid_1_1_density.html">Fluid::Density</a></div><div class="ttdoc">Used to move and render colour with the velocity field of the Engine. </div><div class="ttdef"><b>Definition:</b> Density.h:25</div></div>
-<div class="ttc" id="class_fluid_1_1_density_html_a6bfb1b2a83856388b273849e1ed4c983"><div class="ttname"><a href="class_fluid_1_1_density.html#a6bfb1b2a83856388b273849e1ed4c983">Fluid::Density::Advect</a></div><div class="ttdeci">void Advect(Engine &amp;engine)</div><div class="ttdoc">Advect the colours rendered with Render using the velocity field in Engine. </div><div class="ttdef"><b>Definition:</b> Density.cpp:28</div></div>
-<div class="ttc" id="namespace_fluid_html"><div class="ttname"><a href="namespace_fluid.html">Fluid</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Size.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Operator.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;Drawable.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Transformable.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Fluid {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span>Engine;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_density.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_fluid_1_1_density.html">Density</a> : <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Renderer::Drawable</a>, <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_transformable.html">Renderer::Transformable</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_density.html">Density</a>(<a class="code" href="struct_vortex2_d_1_1_fluid_1_1_dimensions.html">Dimensions</a> dimensions);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_density.html#a7e62dd6a4bd7af3b86ea2f71a7deafca">Render</a>(<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Renderer::Drawable</a> &amp; <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_density.html#afc06488525759e720a7e633aa3cdea16">Advect</a>(<a class="code" href="class_vortex2_d_1_1_fluid_1_1_engine.html">Engine</a> &amp; engine);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_density.html#a7e62dd6a4bd7af3b86ea2f71a7deafca">Render</a>(<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">Renderer::RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_fluid_1_1_dimensions.html">Dimensions</a> mDimensions;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_buffer.html">Buffer</a> mDensity;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vertex2D__Density__) */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_density_html_a7e62dd6a4bd7af3b86ea2f71a7deafca"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_density.html#a7e62dd6a4bd7af3b86ea2f71a7deafca">Vortex2D::Fluid::Density::Render</a></div><div class="ttdeci">void Render(Renderer::Drawable &amp;object)</div><div class="ttdoc">Renders some colours on the density grid. </div><div class="ttdef"><b>Definition:</b> Density.cpp:23</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_engine_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_engine.html">Vortex2D::Fluid::Engine</a></div><div class="ttdoc">The main class of the framework. Each instance manages a grid and this class is used to set forces...</div><div class="ttdef"><b>Definition:</b> Engine.h:25</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_density_html_afc06488525759e720a7e633aa3cdea16"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_density.html#afc06488525759e720a7e633aa3cdea16">Vortex2D::Fluid::Density::Advect</a></div><div class="ttdeci">void Advect(Engine &amp;engine)</div><div class="ttdoc">Advect the colours rendered with Render using the velocity field in Engine. </div><div class="ttdef"><b>Definition:</b> Density.cpp:29</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_fluid_1_1_dimensions_html"><div class="ttname"><a href="struct_vortex2_d_1_1_fluid_1_1_dimensions.html">Vortex2D::Fluid::Dimensions</a></div><div class="ttdoc">Represents the size of the fluid grid. This is useful if we want a different resolution or scale than...</div><div class="ttdef"><b>Definition:</b> Size.h:17</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">Vortex2D::Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:21</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_density_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_density.html">Vortex2D::Fluid::Density</a></div><div class="ttdoc">Used to move and render colour with the velocity field of the Engine. </div><div class="ttdef"><b>Definition:</b> Density.h:21</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Vortex2D::Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:21</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_buffer_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_buffer.html">Vortex2D::Fluid::Buffer</a></div><div class="ttdoc">Represents the grid used to hold the velocity field, boundaries, density, etc. This holds one or two ...</div><div class="ttdef"><b>Definition:</b> Buffer.h:25</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_transformable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_transformable.html">Vortex2D::Renderer::Transformable</a></div><div class="ttdoc">Class to represent the transformation of an object: position, scale, rotation and anchor...</div><div class="ttdef"><b>Definition:</b> Transformable.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

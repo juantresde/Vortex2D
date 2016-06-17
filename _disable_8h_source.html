@@ -107,93 +107,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Common.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_disable.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_disable.html">Disable</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_disable.html#a3905f070193e538ecf40242502deca63">   27</a></span>&#160;    <a class="code" href="struct_renderer_1_1_disable.html#a3905f070193e538ecf40242502deca63">Disable</a>(GLenum e): e(e)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        glGetIntegerv(e, &amp;enabled);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>(enabled) glDisable(e);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ~<a class="code" href="struct_renderer_1_1_disable.html">Disable</a>()</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span>(enabled) glEnable(e);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GLenum e;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    GLint enabled;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_disable_color_mask.html">   46</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_disable_color_mask.html">DisableColorMask</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="struct_renderer_1_1_disable_color_mask.html">DisableColorMask</a>()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        glColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="struct_renderer_1_1_disable_color_mask.html">DisableColorMask</a>()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_enable.html">   63</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_enable.html">Enable</a></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_enable.html#a149e0682830789ab0e8b364ea92cfa7c">   69</a></span>&#160;    <a class="code" href="struct_renderer_1_1_enable.html#a149e0682830789ab0e8b364ea92cfa7c">Enable</a>(GLenum e): e(e)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        glGetIntegerv(e, &amp;enabled);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span>(!enabled) glEnable(e);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    ~<a class="code" href="struct_renderer_1_1_enable.html">Enable</a>()</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">if</span>(!enabled) glDisable(e);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    GLenum e;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    GLint enabled;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_blend_state.html">   88</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_blend_state.html">BlendState</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_blend_state.html#aaed26915e26c278c8b05d7e22ec819bd">   96</a></span>&#160;    <a class="code" href="struct_renderer_1_1_blend_state.html#aaed26915e26c278c8b05d7e22ec819bd">BlendState</a>(GLint eq, GLint src, GLint dst)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// save blend state</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        glGetIntegerv(GL_BLEND_EQUATION, &amp;blendEquation);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        glGetIntegerv(GL_BLEND_SRC_RGB, &amp;blendSrc);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        glGetIntegerv(GL_BLEND_DST_RGB, &amp;blendDst);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        glBlendFunc(src, dst);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        glBlendEquation(eq);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ~<a class="code" href="struct_renderer_1_1_blend_state.html">BlendState</a>()</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// restore blend state</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        glBlendFunc(blendSrc, blendDst);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        glBlendEquation(blendEquation);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    GLint blendEquation, blendSrc, blendDst;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="struct_renderer_1_1_enable_html_a149e0682830789ab0e8b364ea92cfa7c"><div class="ttname"><a href="struct_renderer_1_1_enable.html#a149e0682830789ab0e8b364ea92cfa7c">Renderer::Enable::Enable</a></div><div class="ttdeci">Enable(GLenum e)</div><div class="ttdoc">Will enable the state if it wasn&#39;t already. </div><div class="ttdef"><b>Definition:</b> Disable.h:69</div></div>
-<div class="ttc" id="struct_renderer_1_1_disable_color_mask_html"><div class="ttname"><a href="struct_renderer_1_1_disable_color_mask.html">Renderer::DisableColorMask</a></div><div class="ttdoc">An RAII class to disable the colour mask and re-enable it on destruction. </div><div class="ttdef"><b>Definition:</b> Disable.h:46</div></div>
-<div class="ttc" id="struct_renderer_1_1_blend_state_html_aaed26915e26c278c8b05d7e22ec819bd"><div class="ttname"><a href="struct_renderer_1_1_blend_state.html#aaed26915e26c278c8b05d7e22ec819bd">Renderer::BlendState::BlendState</a></div><div class="ttdeci">BlendState(GLint eq, GLint src, GLint dst)</div><div class="ttdoc">Saves the current blend equations and set new ones. </div><div class="ttdef"><b>Definition:</b> Disable.h:96</div></div>
-<div class="ttc" id="struct_renderer_1_1_enable_html"><div class="ttname"><a href="struct_renderer_1_1_enable.html">Renderer::Enable</a></div><div class="ttdoc">The opposite of the Disable struct. Will enable an OpenGL state and disable it on destruct if it was ...</div><div class="ttdef"><b>Definition:</b> Disable.h:63</div></div>
-<div class="ttc" id="struct_renderer_1_1_blend_state_html"><div class="ttname"><a href="struct_renderer_1_1_blend_state.html">Renderer::BlendState</a></div><div class="ttdoc">RAII class to set the blend equations and restore the previous one on destruction. </div><div class="ttdef"><b>Definition:</b> Disable.h:88</div></div>
-<div class="ttc" id="struct_renderer_1_1_disable_html"><div class="ttname"><a href="struct_renderer_1_1_disable.html">Renderer::Disable</a></div><div class="ttdoc">a RAII class to disable an OpenGL state (GL_BLEND, GL_STENCIL) and re-enable it if it was enabled bef...</div><div class="ttdef"><b>Definition:</b> Disable.h:21</div></div>
-<div class="ttc" id="struct_renderer_1_1_disable_html_a3905f070193e538ecf40242502deca63"><div class="ttname"><a href="struct_renderer_1_1_disable.html#a3905f070193e538ecf40242502deca63">Renderer::Disable::Disable</a></div><div class="ttdeci">Disable(GLenum e)</div><div class="ttdoc">Disables an OpenGL state. </div><div class="ttdef"><b>Definition:</b> Disable.h:27</div></div>
-<div class="ttc" id="namespace_renderer_html"><div class="ttname"><a href="namespace_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Disable.h:14</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Renderer {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_disable.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable.html">Disable</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_disable.html#a76ad395d6df524bc198341291ce4be7f">   26</a></span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable.html#a76ad395d6df524bc198341291ce4be7f">Disable</a>(GLenum e): e(e)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        glGetIntegerv(e, &amp;enabled);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span>(enabled) glDisable(e);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable.html">Disable</a>()</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>(enabled) glEnable(e);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    GLenum e;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GLint enabled;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html">   45</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html">DisableColorMask</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html">DisableColorMask</a>()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        glColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_FALSE);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ~<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html">DisableColorMask</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_enable.html">   62</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_enable.html">Enable</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_enable.html#a6b746211be88028defce716d9c61b591">   68</a></span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_enable.html#a6b746211be88028defce716d9c61b591">Enable</a>(GLenum e): e(e)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        glGetIntegerv(e, &amp;enabled);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(!enabled) glEnable(e);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    ~<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_enable.html">Enable</a>()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span>(!enabled) glDisable(e);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GLenum e;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    GLint enabled;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html">   87</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html">BlendState</a></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html#a3ca0540959743c65c3daec9cb6ddabce">   95</a></span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html#a3ca0540959743c65c3daec9cb6ddabce">BlendState</a>(GLint eq, GLint src, GLint dst)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">// save blend state</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        glGetIntegerv(GL_BLEND_EQUATION, &amp;blendEquation);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        glGetIntegerv(GL_BLEND_SRC_RGB, &amp;blendSrc);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        glGetIntegerv(GL_BLEND_DST_RGB, &amp;blendDst);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        glBlendFunc(src, dst);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        glBlendEquation(eq);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    ~<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html">BlendState</a>()</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// restore blend state</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        glBlendFunc(blendSrc, blendDst);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        glBlendEquation(blendEquation);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    GLint blendEquation, blendSrc, blendDst;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_blend_state_html_a3ca0540959743c65c3daec9cb6ddabce"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html#a3ca0540959743c65c3daec9cb6ddabce">Vortex2D::Renderer::BlendState::BlendState</a></div><div class="ttdeci">BlendState(GLint eq, GLint src, GLint dst)</div><div class="ttdoc">Saves the current blend equations and set new ones. </div><div class="ttdef"><b>Definition:</b> Disable.h:95</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_enable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_enable.html">Vortex2D::Renderer::Enable</a></div><div class="ttdoc">The opposite of the Disable struct. Will enable an OpenGL state and disable it on destruct if it was ...</div><div class="ttdef"><b>Definition:</b> Disable.h:62</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_disable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_disable.html">Vortex2D::Renderer::Disable</a></div><div class="ttdoc">a RAII class to disable an OpenGL state (GL_BLEND, GL_STENCIL) and re-enable it if it was enabled bef...</div><div class="ttdef"><b>Definition:</b> Disable.h:20</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_enable_html_a6b746211be88028defce716d9c61b591"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_enable.html#a6b746211be88028defce716d9c61b591">Vortex2D::Renderer::Enable::Enable</a></div><div class="ttdeci">Enable(GLenum e)</div><div class="ttdoc">Will enable the state if it wasn&#39;t already. </div><div class="ttdef"><b>Definition:</b> Disable.h:68</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_disable_html_a76ad395d6df524bc198341291ce4be7f"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_disable.html#a76ad395d6df524bc198341291ce4be7f">Vortex2D::Renderer::Disable::Disable</a></div><div class="ttdeci">Disable(GLenum e)</div><div class="ttdoc">Disables an OpenGL state. </div><div class="ttdef"><b>Definition:</b> Disable.h:26</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html">Vortex2D::Renderer::DisableColorMask</a></div><div class="ttdoc">An RAII class to disable the colour mask and re-enable it on destruction. </div><div class="ttdef"><b>Definition:</b> Disable.h:45</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_blend_state_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_blend_state.html">Vortex2D::Renderer::BlendState</a></div><div class="ttdoc">RAII class to set the blend equations and restore the previous one on destruction. </div><div class="ttdef"><b>Definition:</b> Disable.h:87</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

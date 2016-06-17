@@ -98,48 +98,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SuccessiveOverRelaxation.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Vertex2D</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Maximilian Maldacker on 19/08/2015.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2015 Maximilian Maldacker. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __Vertex2D__SuccessiveOverRelaxation__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __Vertex2D__SuccessiveOverRelaxation__</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __Vertex2D__SuccessiveOverRelaxation__</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __Vertex2D__SuccessiveOverRelaxation__</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;LinearSolver.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_fluid.html">Fluid</a></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_fluid_1_1_successive_over_relaxation.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a> : <span class="keyword">public</span> <a class="code" href="struct_fluid_1_1_linear_solver.html">LinearSolver</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a>(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">int</span> iterations = 40);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a>(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">int</span> iterations, <span class="keywordtype">float</span> w);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_successive_over_relaxation.html#a044f2aa3bae85cb3ec923687935c9676">Init</a>(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_fluid_1_1_successive_over_relaxation.html#a22b44511bc5dc6f680d6437fd20d5d48">Solve</a>(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> Step(<a class="code" href="struct_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data, <span class="keywordtype">bool</span> isRed);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> mIterations;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_fluid_1_1_operator.html">Operator</a> mSor;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_fluid_1_1_operator.html">Operator</a> mStencil;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_fluid_1_1_operator.html">Operator</a> mIdentity;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vertex2D__SuccessiveOverRelaxation__) */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_fluid_1_1_successive_over_relaxation_html_a044f2aa3bae85cb3ec923687935c9676"><div class="ttname"><a href="class_fluid_1_1_successive_over_relaxation.html#a044f2aa3bae85cb3ec923687935c9676">Fluid::SuccessiveOverRelaxation::Init</a></div><div class="ttdeci">void Init(LinearSolver::Data &amp;data) override</div><div class="ttdoc">Sets up the stencil mask to enable red-black solving. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.cpp:73</div></div>
-<div class="ttc" id="struct_fluid_1_1_linear_solver_1_1_data_html"><div class="ttname"><a href="struct_fluid_1_1_linear_solver_1_1_data.html">Fluid::LinearSolver::Data</a></div><div class="ttdoc">The data of the linear solver. In Ax = b, x is first component of Pressure, A is Weights + Diagonals...</div><div class="ttdef"><b>Definition:</b> LinearSolver.h:29</div></div>
-<div class="ttc" id="class_fluid_1_1_operator_html"><div class="ttname"><a href="class_fluid_1_1_operator.html">Fluid::Operator</a></div><div class="ttdoc">This is a helper class to write succint code when running a shader with multiple Texture inputs on a ...</div><div class="ttdef"><b>Definition:</b> Operator.h:35</div></div>
-<div class="ttc" id="class_fluid_1_1_successive_over_relaxation_html_a22b44511bc5dc6f680d6437fd20d5d48"><div class="ttname"><a href="class_fluid_1_1_successive_over_relaxation.html#a22b44511bc5dc6f680d6437fd20d5d48">Fluid::SuccessiveOverRelaxation::Solve</a></div><div class="ttdeci">void Solve(LinearSolver::Data &amp;data) override</div><div class="ttdoc">Iterative solving of the linear equations in data. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.cpp:88</div></div>
-<div class="ttc" id="class_fluid_1_1_successive_over_relaxation_html"><div class="ttname"><a href="class_fluid_1_1_successive_over_relaxation.html">Fluid::SuccessiveOverRelaxation</a></div><div class="ttdoc">An iterative black and red successive over relaxation linear solver. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.h:20</div></div>
-<div class="ttc" id="struct_fluid_1_1_linear_solver_html"><div class="ttname"><a href="struct_fluid_1_1_linear_solver.html">Fluid::LinearSolver</a></div><div class="ttdoc">An interface to represent a linear solver. </div><div class="ttdef"><b>Definition:</b> LinearSolver.h:20</div></div>
-<div class="ttc" id="namespace_fluid_html"><div class="ttname"><a href="namespace_fluid.html">Fluid</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;LinearSolver.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Fluid {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a> : <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_fluid_1_1_linear_solver.html">LinearSolver</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a>(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">int</span> iterations = 40);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html">SuccessiveOverRelaxation</a>(<span class="keyword">const</span> glm::vec2 &amp; size, <span class="keywordtype">int</span> iterations, <span class="keywordtype">float</span> w);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html#a44c9e53c4f6e526a9a9ac472c9954fde">Init</a>(<a class="code" href="struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html#ad9e184f0653590a0cce43dd3da426d80">Solve</a>(<a class="code" href="struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> Step(<a class="code" href="struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html">LinearSolver::Data</a> &amp; data, <span class="keywordtype">bool</span> isRed);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> mIterations;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html">Operator</a> mSor;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html">Operator</a> mStencil;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_vortex2_d_1_1_fluid_1_1_operator.html">Operator</a> mIdentity;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vertex2D__SuccessiveOverRelaxation__) */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct_vortex2_d_1_1_fluid_1_1_linear_solver_html"><div class="ttname"><a href="struct_vortex2_d_1_1_fluid_1_1_linear_solver.html">Vortex2D::Fluid::LinearSolver</a></div><div class="ttdoc">An interface to represent a linear solver. </div><div class="ttdef"><b>Definition:</b> LinearSolver.h:16</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation_html_ad9e184f0653590a0cce43dd3da426d80"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html#ad9e184f0653590a0cce43dd3da426d80">Vortex2D::Fluid::SuccessiveOverRelaxation::Solve</a></div><div class="ttdeci">void Solve(LinearSolver::Data &amp;data) override</div><div class="ttdoc">Iterative solving of the linear equations in data. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.cpp:87</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data_html"><div class="ttname"><a href="struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html">Vortex2D::Fluid::LinearSolver::Data</a></div><div class="ttdoc">The data of the linear solver. In Ax = b, x is first component of Pressure, A is Weights + Diagonals...</div><div class="ttdef"><b>Definition:</b> LinearSolver.h:25</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_operator_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_operator.html">Vortex2D::Fluid::Operator</a></div><div class="ttdoc">This is a helper class to write succint code when running a shader with multiple Texture inputs on a ...</div><div class="ttdef"><b>Definition:</b> Operator.h:31</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation_html"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html">Vortex2D::Fluid::SuccessiveOverRelaxation</a></div><div class="ttdoc">An iterative black and red successive over relaxation linear solver. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.h:16</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation_html_a44c9e53c4f6e526a9a9ac472c9954fde"><div class="ttname"><a href="class_vortex2_d_1_1_fluid_1_1_successive_over_relaxation.html#a44c9e53c4f6e526a9a9ac472c9954fde">Vortex2D::Fluid::SuccessiveOverRelaxation::Init</a></div><div class="ttdeci">void Init(LinearSolver::Data &amp;data) override</div><div class="ttdoc">Sets up the stencil mask to enable red-black solving. </div><div class="ttdef"><b>Definition:</b> SuccessiveOverRelaxation.cpp:72</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

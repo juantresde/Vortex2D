@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['colour',['Colour',['../class_fluid_1_1_water.html#ab3b866ce98ea896696c21fad77a8cb86',1,'Fluid::Water']]]
+  ['colour',['Colour',['../class_vortex2_d_1_1_fluid_1_1_water.html#a2613dc4cd8ccb95aa78218b318137cb1',1,'Vortex2D::Fluid::Water']]]
 ];

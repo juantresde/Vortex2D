@@ -109,158 +109,157 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Common.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Uniform.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span>Program;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer_1_1_shader.html">Shader</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_renderer_1_1_shader.html">Shader</a> &amp; <a class="code" href="class_renderer_1_1_shader.html#ac4719b98fb4452cdc7abce9d07b238e7">Source</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * source);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_renderer_1_1_shader.html">Shader</a> &amp; <a class="code" href="class_renderer_1_1_shader.html#a0d233db10e8b93dd1063efe46cae76ac">Compile</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_renderer_1_1_shader.html">Shader</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_renderer_1_1_program.html">Program</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#a3a412d757deb04629de4d547d953ddc9">   45</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> GLuint <a class="code" href="class_renderer_1_1_shader.html#a3a412d757deb04629de4d547d953ddc9">TexCoords</a> = 1;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#a37cce2766d4ba2bfa3647751fdfa7481">   50</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> GLuint <a class="code" href="class_renderer_1_1_shader.html#a37cce2766d4ba2bfa3647751fdfa7481">Position</a> = 2;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#a6db8d8ecf11b7ba8eb90cdd2a0f6a354">   55</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_renderer_1_1_shader.html#a6db8d8ecf11b7ba8eb90cdd2a0f6a354">PositionVert</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#a74f2d2919b02e38d656e2b0c54e2c5e5">   60</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_renderer_1_1_shader.html#a74f2d2919b02e38d656e2b0c54e2c5e5">PositionFrag</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#af630b8ac5ecef6d83fc10d50ad249505">   65</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_renderer_1_1_shader.html#af630b8ac5ecef6d83fc10d50ad249505">TexturePositionVert</a>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shader.html#a20c499848c262713fbc8ca430c45e3a5">   70</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_renderer_1_1_shader.html#a20c499848c262713fbc8ca430c45e3a5">TexturePositionFrag</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_renderer_1_1_shader.html">Shader</a>(GLuint shader);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    GLuint mShader;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * PositionName;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * TexCoordsName;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_vertex_shader.html">   84</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_vertex_shader.html">VertexShader</a> : <a class="code" href="class_renderer_1_1_shader.html">Shader</a></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="struct_renderer_1_1_vertex_shader.html">VertexShader</a>();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_fragment_shader.html">   92</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_fragment_shader.html">FragmentShader</a> : <a class="code" href="class_renderer_1_1_shader.html">Shader</a></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="struct_renderer_1_1_fragment_shader.html">FragmentShader</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_renderer_1_1_uniform.html">  102</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer_1_1_uniform.html">Uniform</a></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_renderer_1_1_uniform.html">Uniform</a>() : mLocation(GL_INVALID_VALUE){}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_renderer_1_1_uniform.html">Uniform</a>(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; program, <span class="keyword">const</span> std::string &amp; name);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> SetLocation(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; program, <span class="keyword">const</span> std::string &amp; name);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> Set(T value);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_renderer_1_1_program.html">Program</a>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    GLuint mLocation;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_renderer_1_1_program.html">  118</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer_1_1_program.html">Program</a></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a>();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * vertex, <span class="keyword">const</span> <span class="keywordtype">char</span> * fragment);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    ~<a class="code" href="class_renderer_1_1_program.html">Program</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a>(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp;&amp;);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; operator=(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp;&amp;);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#a0b861200d691e874f623df360bed7e1d">AttachShader</a>(<span class="keyword">const</span> <a class="code" href="class_renderer_1_1_shader.html">Shader</a> &amp; shader);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#adee1455ef700f2b00a8c2493f5a9f531">AttachFeedback</a>(<span class="keyword">const</span> std::vector&lt;const GLchar*&gt; &amp; varyings);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#a5da3df741eace92f0a09c157e060377b">Link</a>();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#a2935a144945c8c534595d5e9c593d4df">Use</a>();</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_program.html#a9722f923de5e58ef859e658e8241bc72">Unuse</a>();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_renderer_1_1_program.html#a65d4e7ff7eaac8ed634a4f3746bccae3">  158</a></span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#a65d4e7ff7eaac8ed634a4f3746bccae3">Set</a>(<span class="keyword">const</span> std::string &amp; name, T value)</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        GLint location = glGetUniformLocation(mProgram, name.c_str());</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        assert(location != GL_INVALID_OPERATION);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        glUniform(location, value);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#a0f82c3dc34a494587658efcc889391b4">SetMVP</a>(<span class="keyword">const</span> glm::mat4 &amp; mvp);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#ab4c63d8a2a13a676ef72ee0e698a0bbb">TexturePositionProgram</a>();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_renderer_1_1_program.html#adaa1fc8a317ba6419c5e47416c8b4b6d">PositionProgram</a>();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_renderer_1_1_uniform.html">Uniform</a>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    GLuint mProgram;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="class_renderer_1_1_uniform.html">Uniform&lt;glm::mat4&gt;</a> mMVP;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> CurrentProgram;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;};</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;Uniform&lt;T&gt;::Uniform(Program &amp; program, <span class="keyword">const</span> std::string &amp; name)</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;{</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    SetLocation(program, name);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> Uniform&lt;T&gt;::SetLocation(Program &amp; program, <span class="keyword">const</span> std::string &amp; name)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    program.Use();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    mLocation = glGetUniformLocation(program.mProgram, name.c_str());</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    assert(mLocation != GL_INVALID_OPERATION);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    program.Unuse();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">void</span> Uniform&lt;T&gt;::Set(T value)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    glUniform(mLocation, value);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__Shader__) */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a0d233db10e8b93dd1063efe46cae76ac"><div class="ttname"><a href="class_renderer_1_1_shader.html#a0d233db10e8b93dd1063efe46cae76ac">Renderer::Shader::Compile</a></div><div class="ttdeci">Shader &amp; Compile()</div><div class="ttdoc">Compile compiles the shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:82</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a3a412d757deb04629de4d547d953ddc9"><div class="ttname"><a href="class_renderer_1_1_shader.html#a3a412d757deb04629de4d547d953ddc9">Renderer::Shader::TexCoords</a></div><div class="ttdeci">static const GLuint TexCoords</div><div class="ttdoc">Attribute location of the texture coordinates variable in the shaders. </div><div class="ttdef"><b>Definition:</b> Shader.h:45</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a0f82c3dc34a494587658efcc889391b4"><div class="ttname"><a href="class_renderer_1_1_program.html#a0f82c3dc34a494587658efcc889391b4">Renderer::Program::SetMVP</a></div><div class="ttdeci">Program &amp; SetMVP(const glm::mat4 &amp;mvp)</div><div class="ttdoc">Set the model-view-projection matrix. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:210</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a65d4e7ff7eaac8ed634a4f3746bccae3"><div class="ttname"><a href="class_renderer_1_1_program.html#a65d4e7ff7eaac8ed634a4f3746bccae3">Renderer::Program::Set</a></div><div class="ttdeci">Program &amp; Set(const std::string &amp;name, T value)</div><div class="ttdoc">Set a uniform by name. </div><div class="ttdef"><b>Definition:</b> Shader.h:158</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a6db8d8ecf11b7ba8eb90cdd2a0f6a354"><div class="ttname"><a href="class_renderer_1_1_shader.html#a6db8d8ecf11b7ba8eb90cdd2a0f6a354">Renderer::Shader::PositionVert</a></div><div class="ttdeci">static const char * PositionVert</div><div class="ttdoc">Source for the position vertex shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:55</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a74f2d2919b02e38d656e2b0c54e2c5e5"><div class="ttname"><a href="class_renderer_1_1_shader.html#a74f2d2919b02e38d656e2b0c54e2c5e5">Renderer::Shader::PositionFrag</a></div><div class="ttdeci">static const char * PositionFrag</div><div class="ttdoc">Source for the position fragment shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:60</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a20c499848c262713fbc8ca430c45e3a5"><div class="ttname"><a href="class_renderer_1_1_shader.html#a20c499848c262713fbc8ca430c45e3a5">Renderer::Shader::TexturePositionFrag</a></div><div class="ttdeci">static const char * TexturePositionFrag</div><div class="ttdoc">Source for the texture/position fragment shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:70</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_af630b8ac5ecef6d83fc10d50ad249505"><div class="ttname"><a href="class_renderer_1_1_shader.html#af630b8ac5ecef6d83fc10d50ad249505">Renderer::Shader::TexturePositionVert</a></div><div class="ttdeci">static const char * TexturePositionVert</div><div class="ttdoc">Source for the texture/position vertex shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:65</div></div>
-<div class="ttc" id="struct_renderer_1_1_vertex_shader_html"><div class="ttname"><a href="struct_renderer_1_1_vertex_shader.html">Renderer::VertexShader</a></div><div class="ttdoc">Vertex Shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:84</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_ab4c63d8a2a13a676ef72ee0e698a0bbb"><div class="ttname"><a href="class_renderer_1_1_program.html#ab4c63d8a2a13a676ef72ee0e698a0bbb">Renderer::Program::TexturePositionProgram</a></div><div class="ttdeci">static Program &amp; TexturePositionProgram()</div><div class="ttdoc">Identity shader with a position & texture component (e.g. used in Sprite) </div><div class="ttdef"><b>Definition:</b> Shader.cpp:216</div></div>
-<div class="ttc" id="struct_renderer_1_1_fragment_shader_html"><div class="ttname"><a href="struct_renderer_1_1_fragment_shader.html">Renderer::FragmentShader</a></div><div class="ttdoc">Fragment Shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:92</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_ac4719b98fb4452cdc7abce9d07b238e7"><div class="ttname"><a href="class_renderer_1_1_shader.html#ac4719b98fb4452cdc7abce9d07b238e7">Renderer::Shader::Source</a></div><div class="ttdeci">Shader &amp; Source(const char *source)</div><div class="ttdoc">Source loads the source of the shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:76</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_adee1455ef700f2b00a8c2493f5a9f531"><div class="ttname"><a href="class_renderer_1_1_program.html#adee1455ef700f2b00a8c2493f5a9f531">Renderer::Program::AttachFeedback</a></div><div class="ttdeci">Program &amp; AttachFeedback(const std::vector&lt; const GLchar * &gt; &amp;varyings)</div><div class="ttdoc">Used for setting the variables used in the feedback shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:165</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a0b861200d691e874f623df360bed7e1d"><div class="ttname"><a href="class_renderer_1_1_program.html#a0b861200d691e874f623df360bed7e1d">Renderer::Program::AttachShader</a></div><div class="ttdeci">Program &amp; AttachShader(const Shader &amp;shader)</div><div class="ttdoc">Attach a Fragment or Vertex shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:159</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a9722f923de5e58ef859e658e8241bc72"><div class="ttname"><a href="class_renderer_1_1_program.html#a9722f923de5e58ef859e658e8241bc72">Renderer::Program::Unuse</a></div><div class="ttdeci">static void Unuse()</div><div class="ttdoc">Set the current Program to 0. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:204</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html"><div class="ttname"><a href="class_renderer_1_1_shader.html">Renderer::Shader</a></div><div class="ttdoc">Represents a Vertex or Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:24</div></div>
-<div class="ttc" id="class_renderer_1_1_uniform_html"><div class="ttname"><a href="class_renderer_1_1_uniform.html">Renderer::Uniform</a></div><div class="ttdoc">Uniform that hols the location of a uniform in a shader and allows for fast update of it...</div><div class="ttdef"><b>Definition:</b> Shader.h:102</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a2935a144945c8c534595d5e9c593d4df"><div class="ttname"><a href="class_renderer_1_1_program.html#a2935a144945c8c534595d5e9c593d4df">Renderer::Program::Use</a></div><div class="ttdeci">Program &amp; Use()</div><div class="ttdoc">Use this Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:193</div></div>
-<div class="ttc" id="class_renderer_1_1_shader_html_a37cce2766d4ba2bfa3647751fdfa7481"><div class="ttname"><a href="class_renderer_1_1_shader.html#a37cce2766d4ba2bfa3647751fdfa7481">Renderer::Shader::Position</a></div><div class="ttdeci">static const GLuint Position</div><div class="ttdoc">Attribute location of the position variable in the shaders. </div><div class="ttdef"><b>Definition:</b> Shader.h:50</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_adaa1fc8a317ba6419c5e47416c8b4b6d"><div class="ttname"><a href="class_renderer_1_1_program.html#adaa1fc8a317ba6419c5e47416c8b4b6d">Renderer::Program::PositionProgram</a></div><div class="ttdeci">static Program &amp; PositionProgram()</div><div class="ttdoc">Identity shader with a position component and a colour uniform (e.g. used in Shapes) ...</div><div class="ttdef"><b>Definition:</b> Shader.cpp:225</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html_a5da3df741eace92f0a09c157e060377b"><div class="ttname"><a href="class_renderer_1_1_program.html#a5da3df741eace92f0a09c157e060377b">Renderer::Program::Link</a></div><div class="ttdeci">Program &amp; Link()</div><div class="ttdoc">Link the shaders to the Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:171</div></div>
-<div class="ttc" id="namespace_renderer_html"><div class="ttname"><a href="namespace_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Disable.h:14</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html"><div class="ttname"><a href="class_renderer_1_1_program.html">Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:118</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Renderer {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>Program;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a1cebfa44c0984be451561a072eb4d51d">Source</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * source);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#af2fd9f7f13a9d4f26a462c08bf7f3ec4">Compile</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a76af2bcc034c2439d7711fd2065af09f">   44</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> GLuint <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a76af2bcc034c2439d7711fd2065af09f">TexCoords</a> = 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a917c2c8c38aded66c1a02db8445c690a">   49</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> GLuint <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a917c2c8c38aded66c1a02db8445c690a">Position</a> = 2;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a55df6a82fba6bee8358237963525b0e0">   54</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a55df6a82fba6bee8358237963525b0e0">PositionVert</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#aa38c8c130b76116335880db69e494c33">   59</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#aa38c8c130b76116335880db69e494c33">PositionFrag</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a1ae9215233d9824f9188eb25487efde6">   64</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#a1ae9215233d9824f9188eb25487efde6">TexturePositionVert</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shader.html#aaa95e6faf657130f521e4f81ff27c124">   69</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html#aaa95e6faf657130f521e4f81ff27c124">TexturePositionFrag</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a>(GLuint shader);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    GLuint mShader;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * PositionName;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * TexCoordsName;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_vertex_shader.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_vertex_shader.html">VertexShader</a> : <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_vertex_shader.html">VertexShader</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_fragment_shader.html">   91</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_fragment_shader.html">FragmentShader</a> : <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_fragment_shader.html">FragmentShader</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">  101</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform</a></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform</a>() : mLocation(GL_INVALID_VALUE){}</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; program, <span class="keyword">const</span> std::string &amp; name);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> SetLocation(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; program, <span class="keyword">const</span> std::string &amp; name);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> Set(T value);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    GLuint mLocation;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_program.html">  117</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * vertex, <span class="keyword">const</span> <span class="keywordtype">char</span> * fragment);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    ~<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp;&amp;);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; operator=(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp;&amp;);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a4197c246992154a2d063cadf0e7d85b1">AttachShader</a>(<span class="keyword">const</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shader.html">Shader</a> &amp; shader);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#aaa924b9d4b7378269f20189b98efd41b">AttachFeedback</a>(<span class="keyword">const</span> std::vector&lt;const GLchar*&gt; &amp; varyings);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a994135baf054e73dd9d04a397b4c078f">Link</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a8daa38b70da7889e556d5c954b90eae6">Use</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#ac0eeb9b8d7c89ffd21a97852c0301480">Unuse</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_program.html#a13471767bab028e6fc3c0802881ee0bb">  157</a></span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a13471767bab028e6fc3c0802881ee0bb">Set</a>(<span class="keyword">const</span> std::string &amp; name, T value)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        GLint location = glGetUniformLocation(mProgram, name.c_str());</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        assert(location != GL_INVALID_OPERATION);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        glUniform(location, value);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a50e9e341ce498d0df9e8fbbba5874a0f">SetMVP</a>(<span class="keyword">const</span> glm::mat4 &amp; mvp);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#ac67f6a047c75f42a797a20478cf2b479">TexturePositionProgram</a>();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html#a1decbdd2b8f60cc61e4be4e49dc2f4ca">PositionProgram</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform</a>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    GLuint mProgram;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform&lt;glm::mat4&gt;</a> mMVP;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> CurrentProgram;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;};</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;Uniform&lt;T&gt;::Uniform(Program &amp; program, <span class="keyword">const</span> std::string &amp; name)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    SetLocation(program, name);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">void</span> Uniform&lt;T&gt;::SetLocation(Program &amp; program, <span class="keyword">const</span> std::string &amp; name)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;{</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    program.Use();</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    mLocation = glGetUniformLocation(program.mProgram, name.c_str());</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    assert(mLocation != GL_INVALID_OPERATION);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    program.Unuse();</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> Uniform&lt;T&gt;::Set(T value)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    glUniform(mLocation, value);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__Shader__) */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a8daa38b70da7889e556d5c954b90eae6"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a8daa38b70da7889e556d5c954b90eae6">Vortex2D::Renderer::Program::Use</a></div><div class="ttdeci">Program &amp; Use()</div><div class="ttdoc">Use this Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:192</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_vertex_shader_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_vertex_shader.html">Vortex2D::Renderer::VertexShader</a></div><div class="ttdoc">Vertex Shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:83</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_a76af2bcc034c2439d7711fd2065af09f"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#a76af2bcc034c2439d7711fd2065af09f">Vortex2D::Renderer::Shader::TexCoords</a></div><div class="ttdeci">static const GLuint TexCoords</div><div class="ttdoc">Attribute location of the texture coordinates variable in the shaders. </div><div class="ttdef"><b>Definition:</b> Shader.h:44</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_af2fd9f7f13a9d4f26a462c08bf7f3ec4"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#af2fd9f7f13a9d4f26a462c08bf7f3ec4">Vortex2D::Renderer::Shader::Compile</a></div><div class="ttdeci">Shader &amp; Compile()</div><div class="ttdoc">Compile compiles the shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:81</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html">Vortex2D::Renderer::Shader</a></div><div class="ttdoc">Represents a Vertex or Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:23</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html">Vortex2D::Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:117</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a1decbdd2b8f60cc61e4be4e49dc2f4ca"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a1decbdd2b8f60cc61e4be4e49dc2f4ca">Vortex2D::Renderer::Program::PositionProgram</a></div><div class="ttdeci">static Program &amp; PositionProgram()</div><div class="ttdoc">Identity shader with a position component and a colour uniform (e.g. used in Shapes) ...</div><div class="ttdef"><b>Definition:</b> Shader.cpp:224</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_a1cebfa44c0984be451561a072eb4d51d"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#a1cebfa44c0984be451561a072eb4d51d">Vortex2D::Renderer::Shader::Source</a></div><div class="ttdeci">Shader &amp; Source(const char *source)</div><div class="ttdoc">Source loads the source of the shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:75</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_uniform_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Vortex2D::Renderer::Uniform</a></div><div class="ttdoc">Uniform that hols the location of a uniform in a shader and allows for fast update of it...</div><div class="ttdef"><b>Definition:</b> Shader.h:101</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a994135baf054e73dd9d04a397b4c078f"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a994135baf054e73dd9d04a397b4c078f">Vortex2D::Renderer::Program::Link</a></div><div class="ttdeci">Program &amp; Link()</div><div class="ttdoc">Link the shaders to the Program. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:170</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_a55df6a82fba6bee8358237963525b0e0"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#a55df6a82fba6bee8358237963525b0e0">Vortex2D::Renderer::Shader::PositionVert</a></div><div class="ttdeci">static const char * PositionVert</div><div class="ttdoc">Source for the position vertex shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:54</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_a1ae9215233d9824f9188eb25487efde6"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#a1ae9215233d9824f9188eb25487efde6">Vortex2D::Renderer::Shader::TexturePositionVert</a></div><div class="ttdeci">static const char * TexturePositionVert</div><div class="ttdoc">Source for the texture/position vertex shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:64</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_aaa95e6faf657130f521e4f81ff27c124"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#aaa95e6faf657130f521e4f81ff27c124">Vortex2D::Renderer::Shader::TexturePositionFrag</a></div><div class="ttdeci">static const char * TexturePositionFrag</div><div class="ttdoc">Source for the texture/position fragment shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:69</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_aaa924b9d4b7378269f20189b98efd41b"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#aaa924b9d4b7378269f20189b98efd41b">Vortex2D::Renderer::Program::AttachFeedback</a></div><div class="ttdeci">Program &amp; AttachFeedback(const std::vector&lt; const GLchar * &gt; &amp;varyings)</div><div class="ttdoc">Used for setting the variables used in the feedback shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:164</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a4197c246992154a2d063cadf0e7d85b1"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a4197c246992154a2d063cadf0e7d85b1">Vortex2D::Renderer::Program::AttachShader</a></div><div class="ttdeci">Program &amp; AttachShader(const Shader &amp;shader)</div><div class="ttdoc">Attach a Fragment or Vertex shader. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:158</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a13471767bab028e6fc3c0802881ee0bb"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a13471767bab028e6fc3c0802881ee0bb">Vortex2D::Renderer::Program::Set</a></div><div class="ttdeci">Program &amp; Set(const std::string &amp;name, T value)</div><div class="ttdoc">Set a uniform by name. </div><div class="ttdef"><b>Definition:</b> Shader.h:157</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_a50e9e341ce498d0df9e8fbbba5874a0f"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#a50e9e341ce498d0df9e8fbbba5874a0f">Vortex2D::Renderer::Program::SetMVP</a></div><div class="ttdeci">Program &amp; SetMVP(const glm::mat4 &amp;mvp)</div><div class="ttdoc">Set the model-view-projection matrix. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:209</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_ac67f6a047c75f42a797a20478cf2b479"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#ac67f6a047c75f42a797a20478cf2b479">Vortex2D::Renderer::Program::TexturePositionProgram</a></div><div class="ttdeci">static Program &amp; TexturePositionProgram()</div><div class="ttdoc">Identity shader with a position & texture component (e.g. used in Sprite) </div><div class="ttdef"><b>Definition:</b> Shader.cpp:215</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_fragment_shader_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_fragment_shader.html">Vortex2D::Renderer::FragmentShader</a></div><div class="ttdoc">Fragment Shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:91</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_aa38c8c130b76116335880db69e494c33"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#aa38c8c130b76116335880db69e494c33">Vortex2D::Renderer::Shader::PositionFrag</a></div><div class="ttdeci">static const char * PositionFrag</div><div class="ttdoc">Source for the position fragment shader (. </div><div class="ttdef"><b>Definition:</b> Shader.h:59</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html_ac0eeb9b8d7c89ffd21a97852c0301480"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html#ac0eeb9b8d7c89ffd21a97852c0301480">Vortex2D::Renderer::Program::Unuse</a></div><div class="ttdeci">static void Unuse()</div><div class="ttdoc">Set the current Program to 0. </div><div class="ttdef"><b>Definition:</b> Shader.cpp:203</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shader_html_a917c2c8c38aded66c1a02db8445c690a"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shader.html#a917c2c8c38aded66c1a02db8445c690a">Vortex2D::Renderer::Shader::Position</a></div><div class="ttdeci">static const GLuint Position</div><div class="ttdoc">Attribute location of the position variable in the shaders. </div><div class="ttdef"><b>Definition:</b> Shader.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

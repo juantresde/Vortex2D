@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['water',['Water',['../class_fluid_1_1_water.html',1,'Fluid']]],
-  ['weights',['Weights',['../struct_fluid_1_1_linear_solver_1_1_data.html#aaa347c8f55df84a7c95cb62b18b5e3a2',1,'Fluid::LinearSolver::Data']]]
+  ['water',['Water',['../class_vortex2_d_1_1_fluid_1_1_water.html',1,'Vortex2D::Fluid']]],
+  ['weights',['Weights',['../struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html#a39131281aa43b8ecd4d115f6f84634f6',1,'Vortex2D::Fluid::LinearSolver::Data']]]
 ];

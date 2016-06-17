@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['circle',['Circle',['../struct_renderer_1_1_circle.html',1,'Renderer']]],
-  ['clamptoedge',['ClampToEdge',['../class_fluid_1_1_buffer.html#aecc47b98c883ccc404e640b822e4080a',1,'Fluid::Buffer']]],
-  ['clear',['Clear',['../class_fluid_1_1_buffer.html#adfb8d171c8035eeb5710b17334a46fdd',1,'Fluid::Buffer::Clear()'],['../class_fluid_1_1_water.html#a0cbbdebcc103f5a05b71653c31777f46',1,'Fluid::Water::Clear()'],['../struct_renderer_1_1_render_target.html#a25a1802fc6f92dc0e14687e477e7eaee',1,'Renderer::RenderTarget::Clear()'],['../class_renderer_1_1_render_texture.html#a702cedab3ba67542e81a7e6d8358d96c',1,'Renderer::RenderTexture::Clear()']]],
-  ['clearboundaries',['ClearBoundaries',['../class_fluid_1_1_engine.html#a43b36cb868b6c81f564a5e5b6f02f8c3',1,'Fluid::Engine']]],
-  ['clearstencil',['ClearStencil',['../class_fluid_1_1_buffer.html#ac9239dae1e9e4b488df466605ba7ce7f',1,'Fluid::Buffer::ClearStencil()'],['../class_renderer_1_1_render_texture.html#aab5912b213a4c874460bdcb4f4660ea2',1,'Renderer::RenderTexture::ClearStencil()']]],
-  ['clearvelocities',['ClearVelocities',['../class_fluid_1_1_engine.html#a62b727fc5210b8350a9d5f48587ecfca',1,'Fluid::Engine']]],
-  ['colour',['Colour',['../class_fluid_1_1_water.html#ab3b866ce98ea896696c21fad77a8cb86',1,'Fluid::Water']]],
-  ['compile',['Compile',['../class_renderer_1_1_shader.html#a0d233db10e8b93dd1063efe46cae76ac',1,'Renderer::Shader']]],
-  ['conjugategradient',['ConjugateGradient',['../class_fluid_1_1_conjugate_gradient.html',1,'Fluid']]]
+  ['circle',['Circle',['../struct_vortex2_d_1_1_renderer_1_1_circle.html',1,'Vortex2D::Renderer']]],
+  ['clamptoedge',['ClampToEdge',['../class_vortex2_d_1_1_fluid_1_1_buffer.html#a31c48bf43a69652ec9aa31cc2e0b95f1',1,'Vortex2D::Fluid::Buffer']]],
+  ['clear',['Clear',['../class_vortex2_d_1_1_fluid_1_1_buffer.html#a57dbae3da220c7e0e692acacbe415468',1,'Vortex2D::Fluid::Buffer::Clear()'],['../class_vortex2_d_1_1_fluid_1_1_water.html#a712c8fb4f5db2f8d61165e07d1439a70',1,'Vortex2D::Fluid::Water::Clear()'],['../struct_vortex2_d_1_1_renderer_1_1_render_target.html#a9f68da431b7c2caf07dc268747fdf344',1,'Vortex2D::Renderer::RenderTarget::Clear()'],['../class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf503c0491a4c381a9e64cd7ac1737a6',1,'Vortex2D::Renderer::RenderTexture::Clear()']]],
+  ['clearboundaries',['ClearBoundaries',['../class_vortex2_d_1_1_fluid_1_1_engine.html#a5e52a0f27c8496f8d750caa21ebeab56',1,'Vortex2D::Fluid::Engine']]],
+  ['clearstencil',['ClearStencil',['../class_vortex2_d_1_1_fluid_1_1_buffer.html#a1697dbf8811d8660b2df1803c9f1ce8f',1,'Vortex2D::Fluid::Buffer::ClearStencil()'],['../class_vortex2_d_1_1_renderer_1_1_render_texture.html#a3af841dd3088c2dcb020dc7ecb10a8eb',1,'Vortex2D::Renderer::RenderTexture::ClearStencil()']]],
+  ['clearvelocities',['ClearVelocities',['../class_vortex2_d_1_1_fluid_1_1_engine.html#a979b45aa2651cb836ee9d521e852d829',1,'Vortex2D::Fluid::Engine']]],
+  ['colour',['Colour',['../class_vortex2_d_1_1_fluid_1_1_water.html#a2613dc4cd8ccb95aa78218b318137cb1',1,'Vortex2D::Fluid::Water']]],
+  ['compile',['Compile',['../class_vortex2_d_1_1_renderer_1_1_shader.html#af2fd9f7f13a9d4f26a462c08bf7f3ec4',1,'Vortex2D::Renderer::Shader']]],
+  ['conjugategradient',['ConjugateGradient',['../class_vortex2_d_1_1_fluid_1_1_conjugate_gradient.html',1,'Vortex2D::Fluid']]]
 ];

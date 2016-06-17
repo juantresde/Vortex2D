@@ -109,56 +109,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Texture.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;RenderTarget.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_renderer_1_1_render_texture.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer_1_1_render_texture.html">RenderTexture</a> : <span class="keyword">public</span> <a class="code" href="class_renderer_1_1_texture.html">Texture</a>, <span class="keyword">public</span> <a class="code" href="struct_renderer_1_1_render_target.html">RenderTarget</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">enum class</span> DepthFormat</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        NONE = 0,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        DEPTH24 = GL_DEPTH_COMPONENT24,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        DEPTH24_STENCIL8 = GL_DEPTH24_STENCIL8,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_renderer_1_1_render_texture.html#a661eadb650794de36ce9f1f5260b705b">RenderTexture</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, Texture::PixelFormat pixelFormat, DepthFormat depthFormat = DepthFormat::NONE);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ~<a class="code" href="class_renderer_1_1_render_texture.html">RenderTexture</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_renderer_1_1_render_texture.html#a661eadb650794de36ce9f1f5260b705b">RenderTexture</a>(<a class="code" href="class_renderer_1_1_render_texture.html">RenderTexture</a> &amp;&amp; other);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_renderer_1_1_render_texture.html">RenderTexture</a> &amp; operator=(<a class="code" href="class_renderer_1_1_render_texture.html">RenderTexture</a> &amp;&amp; other);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_render_texture.html#a702cedab3ba67542e81a7e6d8358d96c">Clear</a>(<span class="keyword">const</span> glm::vec4 &amp; colour) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_render_texture.html#a076ba91fc5a47b882349c8a5e109496a">Render</a>(<a class="code" href="struct_renderer_1_1_drawable.html">Drawable</a> &amp; <span class="keywordtype">object</span>, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_render_texture.html#aab5912b213a4c874460bdcb4f4660ea2">ClearStencil</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_renderer_1_1_reader.html">Reader</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> Begin();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> End();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GLuint mFrameBuffer;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    GLuint mDepthRenderBuffer;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    GLint mOldViewPort[4];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    GLint mOldFrameBuffer;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__RenderTexture__) */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_renderer_1_1_render_texture_html_a076ba91fc5a47b882349c8a5e109496a"><div class="ttname"><a href="class_renderer_1_1_render_texture.html#a076ba91fc5a47b882349c8a5e109496a">Renderer::RenderTexture::Render</a></div><div class="ttdeci">void Render(Drawable &amp;object, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Render the object to the target. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:112</div></div>
-<div class="ttc" id="class_renderer_1_1_render_texture_html_a702cedab3ba67542e81a7e6d8358d96c"><div class="ttname"><a href="class_renderer_1_1_render_texture.html#a702cedab3ba67542e81a7e6d8358d96c">Renderer::RenderTexture::Clear</a></div><div class="ttdeci">void Clear(const glm::vec4 &amp;colour) override</div><div class="ttdoc">Clears the render texture. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:91</div></div>
-<div class="ttc" id="struct_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:22</div></div>
-<div class="ttc" id="class_renderer_1_1_reader_html"><div class="ttname"><a href="class_renderer_1_1_reader.html">Renderer::Reader</a></div><div class="ttdoc">Helper class to read & print (to stdout) the content of a RenderTexture. </div><div class="ttdef"><b>Definition:</b> Reader.h:21</div></div>
-<div class="ttc" id="struct_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:22</div></div>
-<div class="ttc" id="class_renderer_1_1_render_texture_html_aab5912b213a4c874460bdcb4f4660ea2"><div class="ttname"><a href="class_renderer_1_1_render_texture.html#aab5912b213a4c874460bdcb4f4660ea2">Renderer::RenderTexture::ClearStencil</a></div><div class="ttdeci">void ClearStencil()</div><div class="ttdoc">Clears the stencil buffer to 0. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:102</div></div>
-<div class="ttc" id="class_renderer_1_1_texture_html"><div class="ttname"><a href="class_renderer_1_1_texture.html">Renderer::Texture</a></div><div class="ttdoc">Create and manage a texture. </div><div class="ttdef"><b>Definition:</b> Texture.h:20</div></div>
-<div class="ttc" id="class_renderer_1_1_render_texture_html"><div class="ttname"><a href="class_renderer_1_1_render_texture.html">Renderer::RenderTexture</a></div><div class="ttdoc">Use to draw objects off-screen on a texture. </div><div class="ttdef"><b>Definition:</b> RenderTexture.h:22</div></div>
-<div class="ttc" id="class_renderer_1_1_render_texture_html_a661eadb650794de36ce9f1f5260b705b"><div class="ttname"><a href="class_renderer_1_1_render_texture.html#a661eadb650794de36ce9f1f5260b705b">Renderer::RenderTexture::RenderTexture</a></div><div class="ttdeci">RenderTexture(int width, int height, Texture::PixelFormat pixelFormat, DepthFormat depthFormat=DepthFormat::NONE)</div><div class="ttdoc">Will create the underlying framebuffer, texture and potential depth/stencil buffer. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:16</div></div>
-<div class="ttc" id="namespace_renderer_html"><div class="ttname"><a href="namespace_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Disable.h:14</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Renderer {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">RenderTexture</a> : <span class="keyword">public</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_texture.html">Texture</a>, <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">RenderTarget</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">enum class</span> DepthFormat</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        NONE = 0,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        DEPTH24 = GL_DEPTH_COMPONENT24,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        DEPTH24_STENCIL8 = GL_DEPTH24_STENCIL8,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf14358fa501f165b0970a314709e7ba">RenderTexture</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, Texture::PixelFormat pixelFormat, DepthFormat depthFormat = DepthFormat::NONE);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">RenderTexture</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf14358fa501f165b0970a314709e7ba">RenderTexture</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">RenderTexture</a> &amp;&amp; other);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">RenderTexture</a> &amp; operator=(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">RenderTexture</a> &amp;&amp; other);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf503c0491a4c381a9e64cd7ac1737a6">Clear</a>(<span class="keyword">const</span> glm::vec4 &amp; colour) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#a91ded873a22c7a504ecc1a2e0165eb56">Render</a>(<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Drawable</a> &amp; <span class="keywordtype">object</span>, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#a3af841dd3088c2dcb020dc7ecb10a8eb">ClearStencil</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_reader.html">Reader</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> Begin();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> End();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    GLuint mFrameBuffer;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    GLuint mDepthRenderBuffer;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    GLint mOldViewPort[4];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    GLint mOldFrameBuffer;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__RenderTexture__) */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_texture_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_texture.html">Vortex2D::Renderer::Texture</a></div><div class="ttdoc">Create and manage a texture. </div><div class="ttdef"><b>Definition:</b> Texture.h:19</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_render_texture_html_acf503c0491a4c381a9e64cd7ac1737a6"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf503c0491a4c381a9e64cd7ac1737a6">Vortex2D::Renderer::RenderTexture::Clear</a></div><div class="ttdeci">void Clear(const glm::vec4 &amp;colour) override</div><div class="ttdoc">Clears the render texture. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:90</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_render_texture_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_render_texture.html">Vortex2D::Renderer::RenderTexture</a></div><div class="ttdoc">Use to draw objects off-screen on a texture. </div><div class="ttdef"><b>Definition:</b> RenderTexture.h:21</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_render_texture_html_a91ded873a22c7a504ecc1a2e0165eb56"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#a91ded873a22c7a504ecc1a2e0165eb56">Vortex2D::Renderer::RenderTexture::Render</a></div><div class="ttdeci">void Render(Drawable &amp;object, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Render the object to the target. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:111</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">Vortex2D::Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:21</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Vortex2D::Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:21</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_render_texture_html_acf14358fa501f165b0970a314709e7ba"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#acf14358fa501f165b0970a314709e7ba">Vortex2D::Renderer::RenderTexture::RenderTexture</a></div><div class="ttdeci">RenderTexture(int width, int height, Texture::PixelFormat pixelFormat, DepthFormat depthFormat=DepthFormat::NONE)</div><div class="ttdoc">Will create the underlying framebuffer, texture and potential depth/stencil buffer. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:15</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_render_texture_html_a3af841dd3088c2dcb020dc7ecb10a8eb"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_render_texture.html#a3af841dd3088c2dcb020dc7ecb10a8eb">Vortex2D::Renderer::RenderTexture::ClearStencil</a></div><div class="ttdeci">void ClearStencil()</div><div class="ttdoc">Clears the stencil buffer to 0. </div><div class="ttdef"><b>Definition:</b> RenderTexture.cpp:101</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_reader_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_reader.html">Vortex2D::Renderer::Reader</a></div><div class="ttdoc">Helper class to read & print (to stdout) the content of a RenderTexture. </div><div class="ttdef"><b>Definition:</b> Reader.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

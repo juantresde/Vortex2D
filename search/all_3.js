@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['data',['Data',['../struct_fluid_1_1_linear_solver_1_1_data.html',1,'Fluid::LinearSolver']]],
-  ['density',['Density',['../class_fluid_1_1_density.html',1,'Fluid']]],
-  ['diagonal',['Diagonal',['../struct_fluid_1_1_linear_solver_1_1_data.html#ae20991692358af0f3180938f65ba828f',1,'Fluid::LinearSolver::Data']]],
-  ['dimensions',['Dimensions',['../struct_fluid_1_1_dimensions.html#a64f7f1eefd9d67fd28fa60753abb32cb',1,'Fluid::Dimensions']]],
-  ['dimensions',['Dimensions',['../struct_fluid_1_1_dimensions.html',1,'Fluid']]],
-  ['disable',['Disable',['../struct_renderer_1_1_disable.html',1,'Renderer']]],
-  ['disable',['Disable',['../struct_renderer_1_1_disable.html#a3905f070193e538ecf40242502deca63',1,'Renderer::Disable']]],
-  ['disablecolormask',['DisableColorMask',['../struct_renderer_1_1_disable_color_mask.html',1,'Renderer']]],
-  ['drawable',['Drawable',['../struct_renderer_1_1_drawable.html',1,'Renderer']]]
+  ['data',['Data',['../struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html',1,'Vortex2D::Fluid::LinearSolver']]],
+  ['density',['Density',['../class_vortex2_d_1_1_fluid_1_1_density.html',1,'Vortex2D::Fluid']]],
+  ['diagonal',['Diagonal',['../struct_vortex2_d_1_1_fluid_1_1_linear_solver_1_1_data.html#ac9399afe7bd0046c06fb52598c211d91',1,'Vortex2D::Fluid::LinearSolver::Data']]],
+  ['dimensions',['Dimensions',['../struct_vortex2_d_1_1_fluid_1_1_dimensions.html#a0bd4d046f6ed318ed6a3e13630126804',1,'Vortex2D::Fluid::Dimensions']]],
+  ['dimensions',['Dimensions',['../struct_vortex2_d_1_1_fluid_1_1_dimensions.html',1,'Vortex2D::Fluid']]],
+  ['disable',['Disable',['../struct_vortex2_d_1_1_renderer_1_1_disable.html',1,'Vortex2D::Renderer']]],
+  ['disable',['Disable',['../struct_vortex2_d_1_1_renderer_1_1_disable.html#a76ad395d6df524bc198341291ce4be7f',1,'Vortex2D::Renderer::Disable']]],
+  ['disablecolormask',['DisableColorMask',['../struct_vortex2_d_1_1_renderer_1_1_disable_color_mask.html',1,'Vortex2D::Renderer']]],
+  ['drawable',['Drawable',['../struct_vortex2_d_1_1_renderer_1_1_drawable.html',1,'Vortex2D::Renderer']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['texcoords',['TexCoords',['../class_renderer_1_1_shader.html#a3a412d757deb04629de4d547d953ddc9',1,'Renderer::Shader']]],
-  ['texturepositionfrag',['TexturePositionFrag',['../class_renderer_1_1_shader.html#a20c499848c262713fbc8ca430c45e3a5',1,'Renderer::Shader']]],
-  ['texturepositionvert',['TexturePositionVert',['../class_renderer_1_1_shader.html#af630b8ac5ecef6d83fc10d50ad249505',1,'Renderer::Shader']]]
+  ['texcoords',['TexCoords',['../class_vortex2_d_1_1_renderer_1_1_shader.html#a76af2bcc034c2439d7711fd2065af09f',1,'Vortex2D::Renderer::Shader']]],
+  ['texturepositionfrag',['TexturePositionFrag',['../class_vortex2_d_1_1_renderer_1_1_shader.html#aaa95e6faf657130f521e4f81ff27c124',1,'Vortex2D::Renderer::Shader']]],
+  ['texturepositionvert',['TexturePositionVert',['../class_vortex2_d_1_1_renderer_1_1_shader.html#a1ae9215233d9824f9188eb25487efde6',1,'Vortex2D::Renderer::Shader']]]
 ];

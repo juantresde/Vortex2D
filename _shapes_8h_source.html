@@ -112,74 +112,73 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">typedef</span> std::vector&lt;glm::vec2&gt; Path;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_renderer_1_1_shape.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_renderer_1_1_shape.html">Shape</a> : <span class="keyword">public</span> <a class="code" href="struct_renderer_1_1_drawable.html">Drawable</a>, <span class="keyword">public</span> <a class="code" href="struct_renderer_1_1_transformable.html">Transformable</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_renderer_1_1_shape.html">Shape</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    ~<a class="code" href="class_renderer_1_1_shape.html">Shape</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_renderer_1_1_shape.html">Shape</a>(<a class="code" href="class_renderer_1_1_shape.html">Shape</a> &amp;&amp;);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_shape.html#ad3f20afd2ee407e9ae8601a2333ffbd6">SetType</a>(GLuint type);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_shape.html#a129696b0999c3e4e525b63a430a9bbaa">Set</a>(<span class="keyword">const</span> Path &amp; path);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_shape.html#a3341ea4187f49e7c3890147de8e1c621">SetProgram</a>(<a class="code" href="class_renderer_1_1_program.html">Program</a> &amp; program);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_renderer_1_1_shape.html#a2e11889213428606ab6be85022d8ab21">Render</a>(<a class="code" href="struct_renderer_1_1_render_target.html">RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    glm::vec4 Colour;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    GLuint mType;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    GLuint mVertexBuffer;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    GLuint mVertexArray;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    uint32_t mNumVertices;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_renderer_1_1_uniform.html">Uniform&lt;glm::vec4&gt;</a> mColourUniform;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="class_renderer_1_1_program.html">Program</a> * mProgram;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_rectangle.html">   69</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_rectangle.html">Rectangle</a> : <a class="code" href="class_renderer_1_1_shape.html">Shape</a></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="struct_renderer_1_1_rectangle.html">Rectangle</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="struct_renderer_1_1_rectangle.html">Rectangle</a>(<span class="keyword">const</span> glm::vec2 &amp; size);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_renderer_1_1_rectangle.html#a33793b8f68548ec5a184841eebf32bba">SetRectangle</a>(<span class="keyword">const</span> glm::vec2 &amp; size);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="struct_renderer_1_1_circle.html">   83</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_renderer_1_1_circle.html">Circle</a> : <a class="code" href="class_renderer_1_1_shape.html">Shape</a></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="struct_renderer_1_1_circle.html">Circle</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="struct_renderer_1_1_circle.html">Circle</a>(<span class="keywordtype">float</span> size);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_renderer_1_1_circle.html#ac8fead807a90c17b0bd0a66fa0148e60">SetCircle</a>(<span class="keywordtype">float</span> size);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__Shapes__) */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_renderer_1_1_shape_html_ad3f20afd2ee407e9ae8601a2333ffbd6"><div class="ttname"><a href="class_renderer_1_1_shape.html#ad3f20afd2ee407e9ae8601a2333ffbd6">Renderer::Shape::SetType</a></div><div class="ttdeci">void SetType(GLuint type)</div><div class="ttdoc">SetType sets the primitive type of this shape. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:56</div></div>
-<div class="ttc" id="struct_renderer_1_1_rectangle_html_a33793b8f68548ec5a184841eebf32bba"><div class="ttname"><a href="struct_renderer_1_1_rectangle.html#a33793b8f68548ec5a184841eebf32bba">Renderer::Rectangle::SetRectangle</a></div><div class="ttdeci">void SetRectangle(const glm::vec2 &amp;size)</div><div class="ttdoc">Sets the rectangle size. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:100</div></div>
-<div class="ttc" id="struct_renderer_1_1_transformable_html"><div class="ttname"><a href="struct_renderer_1_1_transformable.html">Renderer::Transformable</a></div><div class="ttdoc">Class to represent the transformation of an object: position, scale, rotation and anchor...</div><div class="ttdef"><b>Definition:</b> Transformable.h:46</div></div>
-<div class="ttc" id="struct_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:22</div></div>
-<div class="ttc" id="struct_renderer_1_1_circle_html_ac8fead807a90c17b0bd0a66fa0148e60"><div class="ttname"><a href="struct_renderer_1_1_circle.html#ac8fead807a90c17b0bd0a66fa0148e60">Renderer::Circle::SetCircle</a></div><div class="ttdeci">void SetCircle(float size)</div><div class="ttdoc">Sets the circle radius. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:135</div></div>
-<div class="ttc" id="struct_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:22</div></div>
-<div class="ttc" id="struct_renderer_1_1_rectangle_html"><div class="ttname"><a href="struct_renderer_1_1_rectangle.html">Renderer::Rectangle</a></div><div class="ttdoc">A solid colour rectangle defined by two triangles. Implements the Drawable interface and Transformabl...</div><div class="ttdef"><b>Definition:</b> Shapes.h:69</div></div>
-<div class="ttc" id="class_renderer_1_1_shape_html_a2e11889213428606ab6be85022d8ab21"><div class="ttname"><a href="class_renderer_1_1_shape.html#a2e11889213428606ab6be85022d8ab21">Renderer::Shape::Render</a></div><div class="ttdeci">void Render(RenderTarget &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Renders on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:79</div></div>
-<div class="ttc" id="class_renderer_1_1_shape_html_a129696b0999c3e4e525b63a430a9bbaa"><div class="ttname"><a href="class_renderer_1_1_shape.html#a129696b0999c3e4e525b63a430a9bbaa">Renderer::Shape::Set</a></div><div class="ttdeci">void Set(const Path &amp;path)</div><div class="ttdoc">Set sets a list of points (e.g. triangles) </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:67</div></div>
-<div class="ttc" id="class_renderer_1_1_shape_html_a3341ea4187f49e7c3890147de8e1c621"><div class="ttname"><a href="class_renderer_1_1_shape.html#a3341ea4187f49e7c3890147de8e1c621">Renderer::Shape::SetProgram</a></div><div class="ttdeci">void SetProgram(Program &amp;program)</div><div class="ttdoc">SetProgram the program to be used when rendering. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:61</div></div>
-<div class="ttc" id="struct_renderer_1_1_circle_html"><div class="ttname"><a href="struct_renderer_1_1_circle.html">Renderer::Circle</a></div><div class="ttdoc">A solid colour rectangle defined by a triangle fan. Implements the Drawable interface and Transformab...</div><div class="ttdef"><b>Definition:</b> Shapes.h:83</div></div>
-<div class="ttc" id="class_renderer_1_1_uniform_html"><div class="ttname"><a href="class_renderer_1_1_uniform.html">Renderer::Uniform&lt; glm::vec4 &gt;</a></div></div>
-<div class="ttc" id="namespace_renderer_html"><div class="ttname"><a href="namespace_renderer.html">Renderer</a></div><div class="ttdef"><b>Definition:</b> Disable.h:14</div></div>
-<div class="ttc" id="class_renderer_1_1_program_html"><div class="ttname"><a href="class_renderer_1_1_program.html">Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:118</div></div>
-<div class="ttc" id="class_renderer_1_1_shape_html"><div class="ttname"><a href="class_renderer_1_1_shape.html">Renderer::Shape</a></div><div class="ttdoc">Generic class to render a solid coloured shape using the basic OpenGL primitives. ...</div><div class="ttdef"><b>Definition:</b> Shapes.h:27</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_vortex2_d.html">Vortex2D</a> { <span class="keyword">namespace </span>Renderer {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">typedef</span> std::vector&lt;glm::vec2&gt; Path;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_vortex2_d_1_1_renderer_1_1_shape.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a> : <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Drawable</a>, <span class="keyword">public</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_transformable.html">Transformable</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ~<a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a> &amp;&amp;);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html#acb9f903bee8b066b5ee314963c834b0b">SetType</a>(GLuint type);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html#aa72f7782e31e61aafadb3de3c1117339">Set</a>(<span class="keyword">const</span> Path &amp; path);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html#a154fe94444b617902e51edd600becfcb">SetProgram</a>(<a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> &amp; program);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html#a7c484111f6d40e631761174ec6740e27">Render</a>(<a class="code" href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">RenderTarget</a> &amp; target, <span class="keyword">const</span> glm::mat4 &amp; transform = glm::mat4()) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    glm::vec4 Colour;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    GLuint mType;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    GLuint mVertexBuffer;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    GLuint mVertexArray;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint32_t mNumVertices;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Uniform&lt;glm::vec4&gt;</a> mColourUniform;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_vortex2_d_1_1_renderer_1_1_program.html">Program</a> * mProgram;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html">   68</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html">Rectangle</a> : <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html">Rectangle</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html">Rectangle</a>(<span class="keyword">const</span> glm::vec2 &amp; size);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html#a4368d262531c08b52bd2aa9aca364ab2">SetRectangle</a>(<span class="keyword">const</span> glm::vec2 &amp; size);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="struct_vortex2_d_1_1_renderer_1_1_circle.html">   82</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vortex2_d_1_1_renderer_1_1_circle.html">Circle</a> : <a class="code" href="class_vortex2_d_1_1_renderer_1_1_shape.html">Shape</a></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_circle.html">Circle</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_circle.html">Circle</a>(<span class="keywordtype">float</span> size);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="struct_vortex2_d_1_1_renderer_1_1_circle.html#a97b1d7051905fc0389230bc1720dd031">SetCircle</a>(<span class="keywordtype">float</span> size);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined(__Vortex__Shapes__) */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_rectangle_html_a4368d262531c08b52bd2aa9aca364ab2"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html#a4368d262531c08b52bd2aa9aca364ab2">Vortex2D::Renderer::Rectangle::SetRectangle</a></div><div class="ttdeci">void SetRectangle(const glm::vec2 &amp;size)</div><div class="ttdoc">Sets the rectangle size. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:99</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_circle_html_a97b1d7051905fc0389230bc1720dd031"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_circle.html#a97b1d7051905fc0389230bc1720dd031">Vortex2D::Renderer::Circle::SetCircle</a></div><div class="ttdeci">void SetCircle(float size)</div><div class="ttdoc">Sets the circle radius. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:134</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_program_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_program.html">Vortex2D::Renderer::Program</a></div><div class="ttdoc">A program which is defined from a Vertex and Fragment shader. </div><div class="ttdef"><b>Definition:</b> Shader.h:117</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_circle_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_circle.html">Vortex2D::Renderer::Circle</a></div><div class="ttdoc">A solid colour rectangle defined by a triangle fan. Implements the Drawable interface and Transformab...</div><div class="ttdef"><b>Definition:</b> Shapes.h:82</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shape_html_acb9f903bee8b066b5ee314963c834b0b"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shape.html#acb9f903bee8b066b5ee314963c834b0b">Vortex2D::Renderer::Shape::SetType</a></div><div class="ttdeci">void SetType(GLuint type)</div><div class="ttdoc">SetType sets the primitive type of this shape. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:55</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_uniform_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_uniform.html">Vortex2D::Renderer::Uniform&lt; glm::vec4 &gt;</a></div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_render_target_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_render_target.html">Vortex2D::Renderer::RenderTarget</a></div><div class="ttdoc">And interface to represent a target that can be rendered to. This is implemented by the RenderWindow ...</div><div class="ttdef"><b>Definition:</b> RenderTarget.h:21</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shape_html_a154fe94444b617902e51edd600becfcb"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shape.html#a154fe94444b617902e51edd600becfcb">Vortex2D::Renderer::Shape::SetProgram</a></div><div class="ttdeci">void SetProgram(Program &amp;program)</div><div class="ttdoc">SetProgram the program to be used when rendering. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:60</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_drawable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_drawable.html">Vortex2D::Renderer::Drawable</a></div><div class="ttdoc">An interface to represent an object that can be rendered on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Drawable.h:21</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_rectangle_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_rectangle.html">Vortex2D::Renderer::Rectangle</a></div><div class="ttdoc">A solid colour rectangle defined by two triangles. Implements the Drawable interface and Transformabl...</div><div class="ttdef"><b>Definition:</b> Shapes.h:68</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shape_html_a7c484111f6d40e631761174ec6740e27"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shape.html#a7c484111f6d40e631761174ec6740e27">Vortex2D::Renderer::Shape::Render</a></div><div class="ttdeci">void Render(RenderTarget &amp;target, const glm::mat4 &amp;transform=glm::mat4()) override</div><div class="ttdoc">Renders on a RenderTarget. </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:78</div></div>
+<div class="ttc" id="namespace_vortex2_d_html"><div class="ttname"><a href="namespace_vortex2_d.html">Vortex2D</a></div><div class="ttdef"><b>Definition:</b> Buffer.cpp:13</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shape_html_aa72f7782e31e61aafadb3de3c1117339"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shape.html#aa72f7782e31e61aafadb3de3c1117339">Vortex2D::Renderer::Shape::Set</a></div><div class="ttdeci">void Set(const Path &amp;path)</div><div class="ttdoc">Set sets a list of points (e.g. triangles) </div><div class="ttdef"><b>Definition:</b> Shapes.cpp:66</div></div>
+<div class="ttc" id="class_vortex2_d_1_1_renderer_1_1_shape_html"><div class="ttname"><a href="class_vortex2_d_1_1_renderer_1_1_shape.html">Vortex2D::Renderer::Shape</a></div><div class="ttdoc">Generic class to render a solid coloured shape using the basic OpenGL primitives. ...</div><div class="ttdef"><b>Definition:</b> Shapes.h:26</div></div>
+<div class="ttc" id="struct_vortex2_d_1_1_renderer_1_1_transformable_html"><div class="ttname"><a href="struct_vortex2_d_1_1_renderer_1_1_transformable.html">Vortex2D::Renderer::Transformable</a></div><div class="ttdoc">Class to represent the transformation of an object: position, scale, rotation and anchor...</div><div class="ttdef"><b>Definition:</b> Transformable.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

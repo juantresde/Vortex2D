@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['operator',['Operator',['../class_fluid_1_1_operator.html#a86bcfc4f4f3983dfa83cf61fafba376c',1,'Fluid::Operator']]],
-  ['operator_28_29',['operator()',['../class_fluid_1_1_reduce.html#ab08ad8d94f37b808dd71aae6e996b4cd',1,'Fluid::Reduce::operator()()'],['../class_fluid_1_1_operator.html#ab6a760d8e66386dac5a85f8e2bbf2aed',1,'Fluid::Operator::operator()()']]]
+  ['operator',['Operator',['../class_vortex2_d_1_1_fluid_1_1_operator.html#a3336a8dc625735cff3facd09f74b5019',1,'Vortex2D::Fluid::Operator']]],
+  ['operator_28_29',['operator()',['../class_vortex2_d_1_1_fluid_1_1_reduce.html#a1bd9a8ba4c656b55a4a0f75a7c884259',1,'Vortex2D::Fluid::Reduce::operator()()'],['../class_vortex2_d_1_1_fluid_1_1_operator.html#a4f6d283bac02be3fa7f25cfdc7f14800',1,'Vortex2D::Fluid::Operator::operator()()']]]
 ];
