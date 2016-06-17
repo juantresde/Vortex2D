@@ -119,19 +119,19 @@ Inheritance diagram for Fluid::Water:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a77772afc3759decca670d6c7c4ae31ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77772afc3759decca670d6c7c4ae31ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Water</b> (<a class="el" href="struct_fluid_1_1_dimensions.html">Dimensions</a> dimensions, float dt)</td></tr>
-<tr class="separator:a77772afc3759decca670d6c7c4ae31ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2cac442383d627393e11802dccca07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f2cac442383d627393e11802dccca07"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Water</b> (<a class="el" href="struct_fluid_1_1_dimensions.html">Dimensions</a> dimensions)</td></tr>
+<tr class="separator:a8f2cac442383d627393e11802dccca07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2a9ebb47882da7b96752ff14f414128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fluid_1_1_water.html#ac2a9ebb47882da7b96752ff14f414128">Render</a> (<a class="el" href="struct_renderer_1_1_drawable.html">Renderer::Drawable</a> &amp;object)</td></tr>
 <tr class="memdesc:ac2a9ebb47882da7b96752ff14f414128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders water section.  <a href="#ac2a9ebb47882da7b96752ff14f414128">More...</a><br /></td></tr>
 <tr class="separator:ac2a9ebb47882da7b96752ff14f414128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab10888abc7e5b5b76417e2cfc2cb7d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fluid_1_1_water.html#ab10888abc7e5b5b76417e2cfc2cb7d8a">Render</a> (<a class="el" href="struct_renderer_1_1_render_target.html">Renderer::RenderTarget</a> &amp;target, const glm::mat4 &amp;transform) override</td></tr>
 <tr class="memdesc:ab10888abc7e5b5b76417e2cfc2cb7d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the water on a RenderTarget.  <a href="#ab10888abc7e5b5b76417e2cfc2cb7d8a">More...</a><br /></td></tr>
 <tr class="separator:ab10888abc7e5b5b76417e2cfc2cb7d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa006b3f1a3d6dd388d36931a208d1f87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa006b3f1a3d6dd388d36931a208d1f87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fluid_1_1_water.html#aa006b3f1a3d6dd388d36931a208d1f87">Redistance</a> ()</td></tr>
-<tr class="memdesc:aa006b3f1a3d6dd388d36931a208d1f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the LevelSet to more accurately represent distance to water sections. <br /></td></tr>
-<tr class="separator:aa006b3f1a3d6dd388d36931a208d1f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cbbdebcc103f5a05b71653c31777f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cbbdebcc103f5a05b71653c31777f46"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fluid_1_1_water.html#a0cbbdebcc103f5a05b71653c31777f46">Clear</a> ()</td></tr>
+<tr class="memdesc:a0cbbdebcc103f5a05b71653c31777f46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the LevelSet. <br /></td></tr>
+<tr class="separator:a0cbbdebcc103f5a05b71653c31777f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43854b1f9cf8e4fd238c41fb1d0328f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer_1_1_sprite.html">Renderer::Sprite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fluid_1_1_water.html#ad43854b1f9cf8e4fd238c41fb1d0328f">GetBoundaries</a> ()</td></tr>
 <tr class="memdesc:ad43854b1f9cf8e4fd238c41fb1d0328f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the air section of the water. Has to be used to mark dirichlet boundaries in the engine.  <a href="#ad43854b1f9cf8e4fd238c41fb1d0328f">More...</a><br /></td></tr>
 <tr class="separator:ad43854b1f9cf8e4fd238c41fb1d0328f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,7 +238,7 @@ glm::vec4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <p>Renders water section. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">object</td><td></td></tr>
+    <tr><td class="paramname">object</td><td>needs to draw with colour (1, 0, 0, 0) </td></tr>
   </table>
   </dd>
 </dl>
