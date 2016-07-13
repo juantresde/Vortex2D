@@ -49,7 +49,7 @@ struct LinearSolver
     /**
      * @brief Any initialisation steps to be done before solving the linear equations
      */
-    virtual void Init(Data & data) = 0;
+    virtual void Init(Data & data, OperatorContext3Arg div, OperatorContext2Arg weights, OperatorContext1Arg diagonals) = 0;
 
     /**
      * @brief Solves the linear equations

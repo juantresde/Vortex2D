@@ -142,8 +142,12 @@ ConjugateGradient::ConjugateGradient(const glm::vec2 & size)
     multiplySub.Use().Set("u_texture", 0).Set("u_other", 1).Set("u_scalar", 2).Unuse();
 }
 
-void ConjugateGradient::Init(LinearSolver::Data & data)
+void ConjugateGradient::Init(LinearSolver::Data & data, OperatorContext3Arg div, OperatorContext2Arg weights, OperatorContext1Arg diagonals)
 {
+    data.Pressure = div;
+    data.Weights = weights;
+    data.Diagonal = diagonals;
+
 }
 
 void ConjugateGradient::Solve(LinearSolver::Data & data)

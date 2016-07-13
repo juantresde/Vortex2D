@@ -23,7 +23,7 @@ public:
     /**
      * @brief Empty implementation as there are no initialisation for CG
      */
-    void Init(LinearSolver::Data & data) override;
+    void Init(LinearSolver::Data & data, OperatorContext3Arg div, OperatorContext2Arg weights, OperatorContext1Arg diagonals) override;
 
     /**
      * @brief Solve iteratively solve the linear equations in data

@@ -302,11 +302,11 @@ void Engine::Solve()
         glStencilFunc(GL_EQUAL, 0, 0xFF);
         glStencilMask(0x00);
 
-        mData.Pressure = mDiv(mVelocity, mNeumannBoundaries, mBoundariesVelocity);
-        mData.Weights = mWeights(mDirichletBoundaries, mNeumannBoundaries);
-        mData.Diagonal = mDiagonals(mNeumannBoundaries);
+        auto div = mDiv(mVelocity, mNeumannBoundaries, mBoundariesVelocity);
+        auto weights = mWeights(mDirichletBoundaries, mNeumannBoundaries);
+        auto diagonals = mDiagonals(mNeumannBoundaries);
 
-        mLinearSolver.Init(mData);
+        mLinearSolver.Init(mData, div, weights, diagonals);
         mLinearSolver.Solve(mData);
 
         mVelocity.Swap() = mProject(Back(mVelocity), mData.Pressure, mNeumannBoundaries, mBoundariesVelocity);
