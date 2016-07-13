@@ -17,14 +17,6 @@ Buffer::Buffer(const glm::vec2 & size, unsigned components, bool doubled, bool d
     if(doubled) Add(size, components, depth);
 }
 
-Buffer & Buffer::operator=(OperatorContext context)
-{
-    mSprite.NoTexture();
-    mSprite.SetProgram(context.Program);
-    Render(mSprite);
-    return *this;
-}
-
 Renderer::Reader Buffer::Get()
 {
     return {mTextures.front()};

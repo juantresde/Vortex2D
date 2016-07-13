@@ -21,7 +21,7 @@ public:
     /**
      * @brief Runs the reduce operation
      */
-    OperatorContext operator()(Buffer &a, Buffer &b);
+    OperatorContext1Arg operator()(Buffer &a, Buffer &b);
 
 private:
     std::vector<Buffer> s;

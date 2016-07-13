@@ -13,14 +13,56 @@
 
 namespace Vortex2D { namespace Fluid {
 
+/** 
+ * @brief Helper class to bind a buffer to a specified unit
+ */
+template<typename T>
+struct BindContext : T
+{
+    BindContext(T & t, int unit) : T(t), unit(unit) {}
+    BindContext(Buffer & b, int unit) : T(b), unit(unit) {}
+
+    void Bind()
+    {
+        T::Bind(unit);
+    }
+
+    int unit;
+};
+
 /**
  * @brief Helper class returned from the call operator of Operator.
  */
+template<typename ... Buffers>
 struct OperatorContext
 {
-    OperatorContext(Renderer::Program & p) : Program(p) {}
+    OperatorContext(Renderer::Program & p, const std::tuple<Buffers...> & bindContexts)
+    : Program(p), BindContexts(bindContexts) {}
+
+    template<size_t ...I>
+    void BindHelper(std::index_sequence<I...>)
+    {
+        std::tie((std::get<I>(BindContexts).Bind(),std::ignore)...);
+    }
+
+    void Bind()
+    {
+        BindHelper(std::make_index_sequence<sizeof...(Buffers)>());
+    }
+
     Renderer::Program & Program;
+    std::tuple<Buffers...> BindContexts;
 };
+
+using OperatorContext1Arg = OperatorContext<BindContext<Front>>;
+using OperatorContext2Arg = OperatorContext<BindContext<Front>,BindContext<Front>>;
+using OperatorContext3Arg = OperatorContext<BindContext<Front>,BindContext<Front>,BindContext<Front>>;
+
+template<typename ... Buffers>
+OperatorContext<Buffers...> MakeOperatorContext(Renderer::Program & p, const std::tuple<Buffers...> & bindContexts)
+{
+    return {p, bindContexts};
+}
 
 #define REQUIRES(...) typename std::enable_if<(__VA_ARGS__), int>::type = 0
 
@@ -61,29 +103,30 @@ public:
      * @endcode
      */
     template<typename... Args>
-    OperatorContext operator()(Args && ... args)
+    auto operator()(Args && ... args)
     {
-        BindHelper(0, std::forward<Args>(args)...);
-        return {mProgram};
+        auto bindContexts = BindHelper(0, std::forward<Args>(args)...);
+        return MakeOperatorContext(mProgram, bindContexts);
     }
 
 private:
     template<typename T, typename ... Args, REQUIRES(std::is_same<T, Buffer&>())>
-    void BindHelper(int unit, T && input, Args && ... args)
+    auto BindHelper(int unit, T && input, Args && ... args)
     {
-        Front(input).Bind(unit);
-        BindHelper(unit+1, std::forward<Args>(args)...);
+        BindContext<Front> context(input, unit);
+        return std::tuple_cat(std::make_tuple(context), BindHelper(unit+1, std::forward<Args>(args)...));
     }
 
     template<typename T, typename ... Args, REQUIRES(std::is_same<T, Back>())>
-    void BindHelper(int unit, T && input, Args && ... args)
+    auto BindHelper(int unit, T && input, Args && ... args)
     {
-        input.Bind(unit);
-        BindHelper(unit+1, std::forward<Args>(args)...);
+        BindContext<Back> context(input, unit);
+        return std::tuple_cat(std::make_tuple(context), BindHelper(unit+1, std::forward<Args>(args)...));
     }
 
-    void BindHelper(int unit)
+    auto BindHelper(int unit)
     {
+        return std::make_tuple();
     }
 
     Renderer::Program mProgram;

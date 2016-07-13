@@ -16,7 +16,11 @@ include_directories(${GLEW_INCLUDE_DIRS})
 link_libraries(${GLEW_LIBRARIES})
 
 add_library(vortex2d STATIC ${LIB_SOURCES})
+
+target_compile_features(vortex2d PUBLIC cxx_variadic_templates cxx_return_type_deduction)
+
 target_include_directories(vortex2d PUBLIC Engine Engine/LinearSolver Renderer)
+
 target_link_libraries(vortex2d ${OPENGL_LIBRARIES})
 
 source_group(Renderer REGULAR_EXPRESSION "Renderer/[^/]*(h|cpp)")

@@ -12,6 +12,7 @@
 
 namespace Vortex2D { namespace Fluid {
 
+template<typename ... Buffers>
 struct OperatorContext;
 
 /**
@@ -34,7 +35,15 @@ public:
      */
     Buffer(const glm::vec2 & size, unsigned components, bool doubled = false, bool depth = false);
 
-    Buffer & operator=(OperatorContext context);
+    template<typename ... Buffers>
+    Buffer & operator=(OperatorContext<Buffers...> context)
+    {
+        mSprite.SetProgram(context.Program);
+        mSprite.NoTexture();
+        context.Bind();
+        Render(mSprite);
+        return *this;
+    }
 
     /**
      * @brief Returns a Reader to poke the content of the Texture of the front RenderTexture
