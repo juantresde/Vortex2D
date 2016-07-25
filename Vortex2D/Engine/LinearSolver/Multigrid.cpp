@@ -33,7 +33,7 @@ const char * DampedJacobiFrag = GLSL(
         float d = texture(u_diagonals, v_texCoord).x;
 
         float pressure = 0.0;
-        if(d > 0.0) pressure = mix(cell.x, (dot(p,c) + cell.y) / d, w);
+        if(d > 0.0) pressure = cell.x + w * (dot(p,c) + cell.y) / d;
         
         out_color = vec4(pressure, cell.y, 0.0, 0.0);
     }
@@ -71,7 +71,7 @@ const char * RestrictFrag = GLSL(
     }
 );
 
-const char * ResidualFrag = GLSL(
+const char * ResidualCopyFrag = GLSL(
      in vec2 v_texCoord;
      out vec4 colour_out;
 
@@ -101,7 +101,7 @@ const char * ResidualFrag = GLSL(
 Multigrid::Multigrid(glm::vec2 size)
     : mDepths(0)
     , mProlongate(Renderer::Shader::TexturePositionVert, ProlongateFrag)
-    , mResidual(Renderer::Shader::TexturePositionVert, ResidualFrag)
+    , mResidual(Renderer::Shader::TexturePositionVert, ResidualCopyFrag)
     , mRestrict(Renderer::Shader::TexturePositionVert, RestrictFrag)
     , mDampedJacobi(Renderer::Shader::TexturePositionVert, DampedJacobiFrag)
     , mIdentity(Renderer::Shader::TexturePositionVert, Renderer::Shader::TexturePositionFrag)

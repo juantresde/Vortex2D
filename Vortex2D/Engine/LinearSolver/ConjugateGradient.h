@@ -8,6 +8,7 @@
 
 #include "LinearSolver.h"
 #include "Reduce.h"
+#include "Multigrid.h"
 
 namespace Vortex2D { namespace Fluid {
 
@@ -31,9 +32,11 @@ public:
     void Solve(LinearSolver::Data & data) override;
 
 private:
-    Buffer r, s, z, alpha, beta, rho, rho_new, sigma;
-    Operator matrixMultiply, scalarDivision, multiplyAdd, multiplySub, residual, identity;
+    Buffer r, s, alpha, beta, rho, rho_new, sigma;
+    Operator matrixMultiply, scalarDivision, swizzle, multiplyAdd, multiplySub, residual, identity;
     Reduce reduce;
+    Data z;
+    Multigrid preconditioner;
 };
 
 }}

@@ -27,6 +27,20 @@ const char * DivideFrag = GLSL(
     }
 );
 
+const char * SwizzleFrag = GLSL(
+    in vec2 v_texCoord;
+    out vec4 colour_out;
+
+    uniform sampler2D u_texture;
+
+    void main()
+    {
+        float x = texture(u_texture, v_texCoord).x;
+
+        colour_out = vec4(0.0, x, 0.0, 0.0);
+    }
+);
+
 const char * MultiplyAddFrag = GLSL(
     in vec2 v_texCoord;
     out vec4 colour_out;
@@ -120,7 +134,6 @@ const char * ResidualFrag = GLSL(
 ConjugateGradient::ConjugateGradient(const glm::vec2 & size)
     : r(size, 1, true)
     , s(size, 1, true)
-    , z(size, 1)
     , alpha({1,1}, 1)
     , beta({1,1}, 1)
     , rho({1,1}, 1)
@@ -128,16 +141,20 @@ ConjugateGradient::ConjugateGradient(const glm::vec2 & size)
     , sigma({1,1}, 1)
     , matrixMultiply(Renderer::Shader::TexturePositionVert, MultiplyMatrixFrag)
     , scalarDivision(Renderer::Shader::TexturePositionVert, DivideFrag)
+    , swizzle(Renderer::Shader::TexturePositionVert, SwizzleFrag)
     , multiplyAdd(Renderer::Shader::TexturePositionVert, MultiplyAddFrag)
     , multiplySub(Renderer::Shader::TexturePositionVert, MultiplySubFrag)
     , residual(Renderer::Shader::TexturePositionVert, ResidualFrag)
     , identity(Renderer::Shader::TexturePositionVert, Renderer::Shader::TexturePositionFrag)
     , reduce(size)
+    , z(size)
+    , preconditioner(size)
 {
     residual.Use().Set("u_texture", 0).Set("u_weights", 1).Set("u_diagonals", 2).Unuse();
     identity.Use().Set("u_texture", 0).Unuse();
     matrixMultiply.Use().Set("u_texture", 0).Set("u_weights", 1).Set("u_diagonals", 2).Unuse();
     scalarDivision.Use().Set("u_texture", 0).Set("u_other", 1).Unuse();
+    swizzle.Use().Set("u_texture", 0).Unuse();
     multiplyAdd.Use().Set("u_texture", 0).Set("u_other", 1).Set("u_scalar", 2).Unuse();
     multiplySub.Use().Set("u_texture", 0).Set("u_other", 1).Set("u_scalar", 2).Unuse();
 }
@@ -148,6 +165,7 @@ void ConjugateGradient::Init(LinearSolver::Data & data, OperatorContext3Arg div,
     data.Weights = weights;
     data.Diagonal = diagonals;
 
+    preconditioner.Init(data, div, weights, diagonals);
 }
 
 void ConjugateGradient::Solve(LinearSolver::Data & data)
@@ -163,40 +181,42 @@ void ConjugateGradient::Solve(LinearSolver::Data & data)
     data.Pressure.Clear(glm::vec4(0.0f));
 
     // z = M^-1 r
-    z = scalarDivision(r, data.Diagonal);
+    z.Pressure = swizzle(r);
+    preconditioner.Solve(z);
 
     // s = z
-    s = identity(z);
+    s = identity(z.Pressure);
 
     // rho = zTr
-    rho = reduce(z,r);
+    rho = reduce(z.Pressure,r);
 
-    for(int i = 0 ; i < 40; ++i)
+    for(int i = 0 ; i < 10; ++i)
     {
         // z = Ap
-        z = matrixMultiply(s, data.Weights, data.Diagonal);
+        z.Pressure = matrixMultiply(s, data.Weights, data.Diagonal);
 
         // alpha = rho / zTs
-        sigma = reduce(z,s);
+        sigma = reduce(z.Pressure,s);
         alpha = scalarDivision(rho, sigma);
 
         // p = p + alpha * s
         data.Pressure.Swap() = multiplyAdd(Back(data.Pressure), s, alpha);
 
         // r = r - alpha * z
-        r.Swap() = multiplySub(Back(r), z, alpha);
+        r.Swap() = multiplySub(Back(r), z.Pressure, alpha);
 
         // z = M^-1 r
-        z = scalarDivision(r, data.Diagonal);
+        z.Pressure = swizzle(r);
+        preconditioner.Solve(z);
 
         // rho_new = zTr
-        rho_new = reduce(z,r);
+        rho_new = reduce(z.Pressure,r);
 
         // beta = rho_new / rho
         beta = scalarDivision(rho_new, rho);
 
         // s = z + beta * s
-        s.Swap() = multiplyAdd(z,Back(s),beta);
+        s.Swap() = multiplyAdd(z.Pressure,Back(s),beta);
 
         // rho = rho_new
         rho = identity(rho_new);

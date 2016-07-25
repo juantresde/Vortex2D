@@ -9,6 +9,7 @@
 #include "Size.h"
 #include "Engine.h"
 #include "ConjugateGradient.h"
+#include "Multigrid.h"
 #include "Disable.h"
 
 class BaseExample
@@ -26,7 +27,7 @@ public:
 
 protected:
     Vortex2D::Fluid::Dimensions dimensions;
-    Vortex2D::Fluid::ConjugateGradient solver;
+    Vortex2D::Fluid::Multigrid solver;
     Vortex2D::Fluid::Engine engine;
 
     glm::vec4 green = glm::vec4(35.0f, 163.0f, 143.0f, 255.0f)/glm::vec4(255.0f);
